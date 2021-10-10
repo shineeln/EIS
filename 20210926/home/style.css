@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background-color: #1d1d1d;
+  color: #999;
+}
+
+.header {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #393939;
+  align-items: center;
+}
+
+.header .logo img {
+  width: 200px;
+  margin-left: 8px;
+}
+
+.header .menu {
+  display: flex;
+}
+
+.header .menu figure {
+  width: 50px;
+  height: 60px;
+  border-left: 1px solid #393939;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.header .menu figure:hover {
+  color: #00b3ff;
+  cursor: pointer;
+}
+/* #00b3ff */
+
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.featured .box,
+.uncompleted .card {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/** BOX **/
+
+.featured .box .box-item {
+  flex-basis: 24%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+  height: 204px;
+  overflow: hidden;
+}
+
+.featured .box .box-item .img-con::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.featured .box .box-item a img {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.featured .box .box-item .title {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  line-height: 14px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.featured .box .more-btn {
+  background-color: #161616;
+  justify-content: center;
+  display: flex;
+  flex: 1;
+  padding: 10px;
+  color: #999999cc;
+  border-radius: 10px;
+  text-decoration: blink;
+}
+
+.featured .box .more-btn:hover {
+  background-color: #00b3ff;
+  transform: translate(0.3);
+  color: #fff;
+}
+
+/** CARD **/
+
+.uncompleted .card-title {
+  color: #999;
+  font-size: 16px;
+}
+
+.uncompleted .card {
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.uncompleted .card .card-item {
+  flex-basis: 15%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  gap: 1rem;
+  height: 204px;
+  overflow: hidden;
+}
+
+.uncompleted .card .card-item .img-con::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

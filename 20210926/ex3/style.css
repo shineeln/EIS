@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #ffeb3b;
+    border: 3px solid #ffeb3b;
+    width: 300px;
+    height: 300px;
+    background-image: url(https://i.pinimg.com/originals/0c/c0/03/0cc00365a4a9a7bdb0c3badd90569b59.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.item.circle {
+    border-radius: 50%;
+    background-image: url(https://stickerly.pstatic.net/sticker_pack/Vb3MXfeQgCmfeyibwGfsA/RS94ZT/20/93333355-66c7-4e34-98ce-43d5e0378ab4.png);
+}
+
