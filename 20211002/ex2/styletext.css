@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 100%;
+}
+
+.wrap .row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: space-evenly;
+}
+
+.wrap .row .box {
+    height: 200px;
+    border: 1px solid #000;
+    background-color: darkblue;
+    width: 200px;
+}
+
+.wrap .row .box:nth-child(3), 
+.wrap .row .box:nth-child(4),
+.wrap .row .circle
+{
+    height: 100px;
+}
+
+.wrap .row .circle {
+    border-radius: 50%;
+    width: 100px;
+}
+
+.wrap .row .center {
+    align-self: center;
+}
+
+.wrap .row .bottom {
+    align-self: flex-end;
+}

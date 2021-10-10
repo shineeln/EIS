@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 100%;
+}
+
+.wrap .row {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.wrap .row .box {
+    height: 100px;
+    border: 1px solid #000;
+    width: 200px;
+    /* flex-grow: 1; */
+}
+
+/* .wrap .row .box:nth-child(1) {
+    width: 200px;
+} */
+
+/* shrink - bagtahargui bolood irengut child elementuud ooriigoo humij baina */
+/* grow - 1 gesen utgand etseg elementiin width-iig huwaaj awna */
