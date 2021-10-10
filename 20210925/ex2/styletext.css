@@ -1,0 +1,38 @@
+.item {
+    display: inline-block;
+    width: 15%;
+    border: 3px solid white;
+    padding: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.item1 {
+    background-color: #90AACB;
+    color: #FFB085;
+    font-style: italic;
+}
+
+.item2 {
+    background-color: #406343;
+    color: #F3EFCC;
+}
+
+.item3 {
+    background-color: #1DB9C3;
+    color: #7027A0;
+    font-style: italic;
+}
+
+.item4 {
+    background-color: #FFEF78;
+    color: #A8E7E9;
+}
+
+.item5 {
+    background-color: #FFF7AE;
+    color: #DF2E2E;
+    font-style: italic;
+}

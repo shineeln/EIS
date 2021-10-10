@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header, main, footer {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+main {
+    background-color: #F9F7F7;
+}
+header, footer {
+    background-color: #112D4E;
+    color: #DBE2EF;
+}
+header h1 {
+    padding: 30px;
+}
+header ul {
+    text-align: right;
+    list-style: none;
+    padding-bottom: 30px;
+}
+header ul li {
+    display: inline-block;
+}
+header ul li a {
+    text-decoration: none;
+    color: #DBE2EF;
+    padding: 30px;
+    font-size: 25px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+section h1 {
+    font-size: 2rem;
+    color: #3F72AF;
+    text-align: center;
+    padding: 30px;
+}
+section#about {
+    position: relative;
+}
+section#about h1 {
+    font-size: 2rem;
+    color: #3F72AF;
+    position: absolute;
+}
+section#about p {
+    font-size: 3rem;
+    color: #112D4E;
+    font-style: italic;
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    border: 1px solid #112D4E;
+}
+section#about img {
+    max-width: 100%;
+}
+
+section figure {
+    width : 30%;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 30px;
+}
+
+section figure img {
+    width: 100%;
+    height: 300px;
+}
+
+section figure h5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    color: #F9F7F7;
+}
+
+#table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+#table td, #table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    max-width: 200px;
+}
+
+#table tr:hover {background-color: #ddd;}
+
+#table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #112D4E;
+    color: white;
+}
+
+#table td img {
+    width: 100%;
+}
+
+footer ul li p {
+    font-size: 1.2rem;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+footer>p {
+    text-align: center;
+    color: #F9F7F7;
+    font-size: 20px;
+    padding: 30px;
+}
+
+/* 
+112D4E
+3F72AF
+DBE2EF
+F9F7F7
+*/
