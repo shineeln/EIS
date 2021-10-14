@@ -1,145 +1,240 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap&subset=latin,cyrillic-ext);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Roboto, sans-serif;
 }
 
 body {
-  background-color: #1d1d1d;
-  color: #999;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .header {
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #393939;
-  align-items: center;
-}
-
-.header .logo img {
-  width: 200px;
-  margin-left: 8px;
-}
-
-.header .menu {
-  display: flex;
-}
-
-.header .menu figure {
-  width: 50px;
-  height: 60px;
-  border-left: 1px solid #393939;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.header .menu figure:hover {
-  color: #00b3ff;
-  cursor: pointer;
-}
-/* #00b3ff */
-
-main {
-  max-width: 1200px;
-  margin: auto;
-}
-
-.featured .box,
-.uncompleted .card {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-  gap: 1rem;
-}
-
-/** BOX **/
-
-.featured .box .box-item {
-  flex-basis: 24%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  border-radius: 10px;
-  height: 204px;
-  overflow: hidden;
-}
-
-.featured .box .box-item .img-con::after {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
   width: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
-.featured .box .box-item a img {
-  display: flex;
-  flex: 1;
-  height: 100%;
-}
-
-.featured .box .box-item .title {
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  line-height: 14px;
-  color: #fff;
+.header__top {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
   font-size: 14px;
 }
 
-.featured .box .more-btn {
-  background-color: #161616;
-  justify-content: center;
+.flex-wrap {
   display: flex;
-  flex: 1;
-  padding: 10px;
-  color: #999999cc;
-  border-radius: 10px;
-  text-decoration: blink;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.featured .box .more-btn:hover {
-  background-color: #00b3ff;
-  transform: translate(0.3);
-  color: #fff;
+.flex-wrap.start {
+  justify-content: flex-start;
+}
+.flex-wrap.j-end {
+  justify-content: end;
 }
 
-/** CARD **/
-
-.uncompleted .card-title {
-  color: #999;
-  font-size: 16px;
+.flex-wrap #cal {
+  color: orangered;
+  margin-right: 5px;
 }
 
-.uncompleted .card {
-  flex-wrap: nowrap;
-  overflow: hidden;
+.flex-wrap .exchange {
+  margin-left: 5px;
 }
 
-.uncompleted .card .card-item {
-  flex-basis: 15%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  gap: 1rem;
-  height: 204px;
-  overflow: hidden;
+.container {
+  max-width: 1150px;
+  margin: auto;
 }
 
-.uncompleted .card .card-item .img-con::after {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
+.header__main {
   width: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
+}
+
+.header__main .bg-image {
+  background-image: url(https://content.ikon.mn/ikon/images/silhouette.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.header__nav {
+  width: 100%;
+  background-color: #454d62;
+  color: white;
+}
+
+.header__nav .navigation {
+  width: 90%;
+  justify-content: flex-start;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+/* #dedede */
+.header__nav .navigation li {
+  padding: 10px;
+  border-right: 1px solid #393f50;
+  border-left: 1px solid #545b6e;
+}
+.header__nav .navigation li.active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header__nav .navigation li.covid {
+  color: yellow;
+}
+
+.header__nav .navigation li:hover {
+  color: #dedede;
+  cursor: pointer;
+}
+
+.header__nav .search input {
+  border: 3px solid #fd3e0a;
+  padding: 3px;
+}
+
+.header__nav .search button {
+  border: 3px solid #fd3e0a;
+  color: white;
+  background-color: #fd3e0a;
+  padding: 3px;
+}
+
+.main {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.main .start {
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.main .sidebar {
+  width: 30%;
+  height: 200px;
+  background-color: black;
+}
+
+.main .content {
+  width: 70%;
+  height: 500px;
+  background-color: yellow;
+}
+
+.sidebar__top,
+.sidebar__bottom {
+  width: 100%;
+  height: 200px;
+}
+
+.sidebar__top img,
+.sidebar__bottom img {
+  width: 100%;
+  height: 100%;
+}
+.sidebar__scroll {
+  margin: 8px 0 3px 0;
+}
+.sidebar__scroll-top {
+  width: 100%;
+  border-bottom: 3px solid #fd3e0a;
+}
+.sidebar__scroll-top .box {
+  height: 32px;
+  padding: 5px;
+  width: 50%;
+  text-align: center;
+}
+.sidebar__scroll-top .box:nth-child(1) {
+  background-color: #454d62;
+  color: #dbe1ea;
+}
+.sidebar__scroll-top .box:nth-child(2) {
+  background-color: #dbe1ea;
+  color: #454d62;
+}
+.sidebar__scroll-middle {
+  height: 1980px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-bottom: 2px solid #dbe1ea;
+}
+.sidebar__scroll-newslist {
+  align-self: flex-start;
+  font-size: 13px;
+}
+.sidebar__scroll-news {
+  padding: 8px 0px 8px 0px;
+  border-bottom: 1px dashed #dbe1ea;
+}
+.sidebar__scroll-news .news-img {
+  height: 100px;
+  width: 100px;
+  align-self: flex-start;
+}
+.sidebar__scroll-news .news-img img {
+  height: 100%;
+}
+.sidebar__scroll-news .news-desc {
+  padding: 0 10px;
+}
+.sidebar__scroll-news .news-icon {
+  padding: 4px;
+  color: #454d62;
+}
+.sidebar__scroll-news .news-bottom {
+  list-style: none;
+  font-size: 11px;
+}
+.sidebar__scroll-news .news-bottom li:nth-child(1),
+.sidebar__scroll-news .news-bottom li:nth-child(2) {
+  border-right: 1px solid #dbe1ea;
+  padding: 4px 10px;
+}
+.sidebar__scroll-news .news-bottom li:nth-child(3) {
+  padding-left: 10px;
+}
+.sidebar__scroll-news .news-bottom li:nth-last-child(1) > span {
+  color: #fd3e0a;
+  padding: 2px;
+}
+.sidebar__scroll-banner {
+  height: 200px;
+}
+.sidebar__scroll-banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar__bottom {
+  margin: 8px 0px 8px 0px;
+}
+.sidebar__bottom-sns {
+  gap: 1rem;
+  margin: 6px 0px;
+}
+.sidebar__bottom-sns i {
+  margin: 0 5px;
+}
+.sidebar__bottom-sns button {
+  font-family: "Open Sans Condensed", sans-serif;
+  flex-grow: 1;
+  gap: 1rem;
+  font-size: 16px;
+  color: #fff;
+  border: transparent;
+  padding: 5px;
+}
+.btn-primary {
+  background-color: #3b5998;
+}
+.btn-blue {
+  background-color: #29aae3;
+}
+.btn-yellow {
+  background-color: #ff9900;
 }

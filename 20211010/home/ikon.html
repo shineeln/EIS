@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="">
+</head>
+<body>
+   <header class="header">
+       <div class="header__top">
+           <div class="container">
+               <div class="flex-wrap">
+                   <div class="flex-wrap">
+                        <i id="cal" class="far fa-calendar-alt"></i>
+                        <p> 10 сарын 10, Ням</p>
+                   </div>
+                   <div class="flex-wrap">
+                        <p class="exchange">Улаанбаатар 0°C</p>
+                        <p class="exchange">USD 2848.45</p>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="header__main">
+           <div class="container bg-image">
+               <img src="https://content.ikon.mn/ikon/images/ikon.png" alt="">
+           </div>
+       </div>
+       <div class="header__nav">
+           <div class="container">
+               <div class="flex-wrap">
+                   <ul class="navigation flex-wrap">
+                        <li class="active">Эхлэл</li>
+                        <li class="covid">Ковид-19</li>
+                        <li>Улс-төр</li>
+                        <li>Эдийн-засаг</li>
+                        <li>Эхлэл</li>
+                        <li>Ковид-19</li>
+                        <li>Улс-төр</li>
+                        <li>Эдийн-засаг</li>
+                   </ul>
+                   <div class="search flex-wrap">
+                       <input type="text">
+                       <button>
+                           <i class="fas fa-search"></i>
+                       </button>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </header>
+
+   <main class="main">
+       <div class="container">
+           <div class="flex-wrap start">
+               <div class="sidebar">
+                   <div class="sidebar__top">
+                       <img src="https://content.ikon.mn/raw/2021/9/22/12952/560x400__1_.jpg" alt="">
+                   </div>
+                   <div class="sidebar__scroll">
+                       <div class="sidebar__scroll-top flex-wrap">
+                           <div class="box">
+                                <i class="fas fa-history"></i>
+                           </div>
+                           <div class="box">
+                            <i class="fas fa-fire-alt"></i>
+                           </div>
+                       </div>
+                       <div class="sidebar__scroll-middle flex-wrap">
+                           <div class="sidebar__scroll-newslist">
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-banner">
+                                    <img src="https://content.ikon.mn/raw/2021/10/5/13000/ikon_B2_560x400.jpg" alt="">
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-banner">
+                                    <img src="https://content.ikon.mn/raw/2021/10/13/13021/for-ikon.mn.png" alt="">
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-banner">
+                                    <img src="https://content.ikon.mn/raw/2021/10/5/13000/ikon_B2_560x400.jpg" alt="">
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="sidebar__bottom">
+                        <img src="https://content.ikon.mn/raw/2021/10/5/12999/ikon_banner_3.gif" alt="">
+                        <div class="sidebar__bottom-sns flex-wrap">
+                            <button class="btn-primary"><i class="fab fa-facebook-f"></i>ТААЛАХ</button>
+                            <button class="btn-blue"><i class="fab fa-twitter"></i>ДАГАХ</button>
+                            <button class="btn-yellow"><i class="fas fa-rss"></i>ХОЛБОХ</button>
+                        </div>
+                    </div>
+               </div>
+               <div class="content"></div>
+           </div>
+       </div>
+   </main>
+   <footer class="footer">
+        <div class="footer_logo">
+            <img alt="Зураг" loading="lazy" src="https://content.ikon.mn/ikon/images/footer@2x.png" height="25" valign="middle">
+        </div>
+        <div class="footer_bottom">
+            <div class="footer_icons">
+                <a href="/about">Бидний тухай</a>
+                <span>|</span>
+                <a href="/terms">Үйлчилгээний  нөхцөл</a>
+                <span>|</span>
+                <a href="/policy">Редакцын бодлого</a>
+                <span>|</span>
+                <a href="/advertising">Сурталчилгаа байрлуулах</a>
+                <span>|</span>
+                <a href="/about#contact">Холбоо барих</a>
+                <span>|</span>
+                <a target="_blank" href="/rss">RSS</a>
+            </div>
+            <div class="footer_company">
+                © 2021 Бенекрафт ХХК
+            </div>
+        </div>
+   </footer>
+</body>
+</html>
