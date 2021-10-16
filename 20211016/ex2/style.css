@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* transform rotate, scale(default hemjee ni 1 harin 0.7gwel width 70%bolno gsn ug),  */
+/* skew naluu bairlalar hazailgana */
+/* translate zoono */
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.box {
+width: 400px;
+height: 400px;
+background-color: blueviolet;
+transition: 1s ease-in-out;
+border: 1px solid black;
+animation: shinee 2s linear infinite;
+/* linear negen jigd */
+/* ehleed custom ner, hugatsaa, torol n, dawtamj n(zogsoltgui bol infinite) */
+
+}
+
+@keyframes shinee {
+    from {
+        transform:rotateY(0)
+    }
+    to {
+        transform:rotateY(360deg)
+    }
+    
+}

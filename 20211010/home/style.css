@@ -273,7 +273,6 @@ body {
 }
 .content__top {
   width: 100%;
-  height: 100vh;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: 100px 284px 250px 250px;
@@ -314,14 +313,15 @@ body {
   color: #fd3e0a;
 }
 
-.content__top-news {
+.content__top-news, .content__featured-news {
   width: 100%;
   height: 100%;
   background-color: #000;
   position: relative;
 }
 
-.content__top-news .news-description {
+.content__top-news .news-description,
+.content__featured-news .news-description{
   position: absolute;
   bottom: 0;
   left: 0;

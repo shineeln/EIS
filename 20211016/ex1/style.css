@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* transform rotate, scale(default hemjee ni 1 harin 0.7gwel width 70%bolno gsn ug),  */
+/* skew naluu bairlalar hazailgana */
+/* translate zoono */
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.box, .box2 {
+width: 400px;
+height: 400px;
+background-color: blueviolet;
+transition: 1s ease-in-out;
+border: 1px solid black;
+}
+
+.box:hover {
+    transform: scale(1.7) rotate(360deg);
+    transform : translateX(100px);
+    transform : translateY(100px);
+}
+
+.wrap {
+    perspective: 800px;
+    /* 3hemjeest animation hiihed hereglene. etseg elemented n ogno */
+}
+
+.wrap:hover .box2 {
+    transform: rotateX(360deg)
+}
