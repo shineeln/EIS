@@ -19,7 +19,7 @@
 .row span {
     display: inline-block;
     cursor: pointer;
-    transition: 1s ease-in-out;
+    transition: .5s ease-in-out;
 }
 
 .row span:hover {
