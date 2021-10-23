@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.button-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.button-wrap .btn {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+#modal-wrap {
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+}
+
+#modal-wrap:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+#modal-wrap .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-wrap .modal {
+    width: 30%;
+    height: 200px;
+    background-color: white;
+    border: 3px solid gray ;
+}
+
+#modal-wrap .bg .modal .header{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid gray;
+}
+
+#modal-wrap .bg .modal .header,
+#modal-wrap .bg .modal .content,
+#modal-wrap .bg .modal .footer {
+    padding: 10px;
+}
+#modal-wrap .bg .modal .header a{
+    text-decoration: none;
+    font: bold;
+    color: red;
+}
+
+#modal-wrap .bg .modal .footer{
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid gray;
+}
+
+#modal-wrap .bg .modal .footer a{
+    text-decoration: none;
+    border: 1px solid orange;
+    font: bold;
+    padding: 3px;
+    color: black;
+    border-radius: 10%;
+}
