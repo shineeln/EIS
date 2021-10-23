@@ -124,13 +124,13 @@ ul.header-nav li a {
 .statistic-box h1 {
   font-size: 44px;
   line-height: 56px;
-  color: #293c43 !important;
+  color: #293c43;
   margin-bottom: 0.5rem;
 }
 .statistic-box h4 {
   font-size: 19px;
   line-height: 24px;
-  color: #293c43 !important;
+  color: #293c43 ;
   margin-bottom: 0.5rem;
 }
 .statistic-box h5 {
