@@ -6,6 +6,7 @@
 }
 
 body {
+  font-family: Roboto, sans-serif;
   background-color: #1d1d1d;
   color: #999;
 }
@@ -50,7 +51,7 @@ main {
 }
 
 .featured .box,
-.uncompleted .card {
+.animeList .card {
   display: flex;
   flex-wrap: wrap;
   margin-top: 1rem;
@@ -79,10 +80,11 @@ main {
   right: 0;
 }
 
-.featured .box .box-item a img {
-  display: flex;
-  flex: 1;
+.featured .box .box-item a img,
+.animeList .card-item .img-con img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .featured .box .box-item .title {
@@ -96,6 +98,7 @@ main {
 }
 
 .featured .box .more-btn {
+  font-size: 14px;
   background-color: #161616;
   justify-content: center;
   display: flex;
@@ -112,34 +115,94 @@ main {
   color: #fff;
 }
 
-/** CARD **/
-
-.uncompleted .card-title {
-  color: #999;
-  font-size: 16px;
-}
-
-.uncompleted .card {
-  flex-wrap: nowrap;
-  overflow: hidden;
-}
-
-.uncompleted .card .card-item {
-  flex-basis: 15%;
+.banner {
+  width: 100%;
   display: flex;
   justify-content: center;
-  position: relative;
-  gap: 1rem;
-  height: 204px;
-  overflow: hidden;
+  margin: 20px 0;
+  height: 200px;
 }
 
-.uncompleted .card .card-item .img-con::after {
+.banner img {
+  width: 100%;
+  height: 100%;
+  flex-basis: 75%;
+  object-fit: cover;
+}
+/** CARD **/
+
+.animeList .card-title {
+  color: #999;
+  font-size: 18px;
+  margin: 30px 0 5px 0;
+  font-weight: normal;
+}
+
+.animeList .card {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  height: 270px;
+}
+
+.animeList .card .card-item {
+  height: 100%;
+  flex: 0 0 14%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.animeList .card .card-item .img-con::after {
   content: "";
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   right: 0;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer .menu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid #393939;
+  align-items: center;
+}
+
+.footer .menu figure {
+  width: 50px;
+  height: 60px;
+  border-left: 1px solid #393939;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.footer .menu figure:hover {
+  color: #00b3ff;
+  cursor: pointer;
+}
+
+.footer .copyright {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .copyright p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0 10 px;
+  font-size: 14px;
 }
