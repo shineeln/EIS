@@ -1,0 +1,497 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  width: 100%;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.flex-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  width: 976px;
+  margin: 0 auto;
+}
+.carousel video {
+  width: 100%;
+}
+.redorange {
+  color: #fd3e0a;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: rem;
+}
+.w30 {
+  width: 30%;
+}
+button {
+  font-size: 1rem;
+}
+.header {
+  width: 100%;
+  height: 57px;
+  border-bottom: solid 1px #cfd4d8;
+  position: fixed;
+  z-index: 99;
+  background-color: #fff;
+}
+.header-icon {
+  width: 150px;
+}
+.header-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul.header-nav li {
+  margin-left: 15px;
+}
+ul.header-nav li a {
+  color: #5f717d;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+}
+.menu__mobile {
+  display: none;
+}
+.main {
+  padding-top: 57px;
+}
+.download {
+  justify-content: center;
+  margin: 20px 0;
+  gap: 3.5rem;
+}
+.download button {
+  background: black;
+  width: 250px;
+  border-color: dimgrey;
+  border-radius: 100px;
+  color: white;
+  padding: 10px 30px;
+  justify-content: center;
+  gap: 5px;
+}
+
+.download button img {
+  height: 20px;
+  margin-top: -5px;
+}
+.subtitle {
+  margin: 20px 0;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  color: #293c43;
+  justify-content: center;
+  position: relative;
+}
+.subtitle::after {
+  content: "";
+  background-color: #ff6600;
+  background-image: linear-gradient(302deg, #ff6600 46%, #f93702 100%);
+  height: 8px;
+  width: 200px;
+  border-radius: 50px;
+  text-align: center;
+  position: absolute;
+  top: 56px;
+}
+.statistics {
+  margin: 5.5rem 0 2.5rem 0;
+  gap: 5rem;
+}
+.statistic-box_icon img {
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.statistic-box {
+  text-align: center;
+}
+.statistic-box h1 {
+  font-size: 44px;
+  line-height: 56px;
+  color: #293c43;
+  margin-bottom: 0.5rem;
+}
+.statistic-box h4 {
+  font-size: 19px;
+  line-height: 24px;
+  color: #293c43;
+  margin-bottom: 0.5rem;
+}
+.statistic-box h5 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #293c43;
+}
+.statistic-box p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #5f717d;
+}
+.subheader {
+  text-align: center;
+  margin: 4rem 0 2em 0;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  color: #293c43;
+  font-weight: 300;
+}
+
+.bg-image {
+  background-image: url(https://lend.mn/image/videos/10.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  border-radius: 10px;
+}
+.minusmg {
+  margin: 3rem 0 2.5rem 0;
+}
+.p40 {
+  padding: 40px 0;
+}
+.pb40 {
+  padding-bottom: 40px;
+}
+.con-btn {
+  justify-content: center;
+}
+.con-btn button {
+  cursor: pointer;
+  background: transparent;
+  border-color: #ff6600;
+  border-radius: 50px;
+  width: 33%;
+  color: #ff6600;
+  border-width: 2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0.375rem 0.75rem;
+  height: 40px;
+  justify-content: center;
+}
+
+.con-btn button:hover {
+  background-color: #ff6600;
+  border-radius: 50px;
+  width: 33%;
+  color: white;
+  border-width: 2px;
+  opacity: 1;
+  transition: 0.4s;
+}
+.featuredpost {
+  background-color: #f2f2f2;
+  justify-content: space-evenly;
+}
+.featuredpost .featured img {
+  height: 70px;
+}
+.news-wrap {
+  gap: 2rem;
+  margin-bottom: 20px;
+}
+.news-wrap .news {
+  border-radius: 0.25rem;
+  box-shadow: 0px 12px 30px -11px rgb(0 0 0 / 43%);
+}
+.news .thumbnail {
+  height: 200px;
+}
+
+.news .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.news-body {
+  background-color: #f2f2f2;
+  padding: 1.25rem;
+}
+.news-body .card-title {
+  background-color: #f2f2f2;
+  padding: 1.25rem 0;
+  font-size: large;
+}
+.news-body p {
+  color: #5f717d;
+}
+.news-body a {
+  color: #ff6600;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.awards {
+  width: 100%;
+  background-image: url(https://lend.mn/image/headerimg/ipoheader.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 315px;
+  border-radius: 10px;
+  padding: 20px 0;
+  background-size: cover;
+}
+.awards .subtitle {
+  color: #fff;
+}
+.awards .subheader {
+  color: #fff;
+}
+.award img {
+  height: 98px;
+}
+.awardposts {
+  justify-content: center;
+}
+.footer {
+  background-color: #f2f2f2;
+}
+.footer-wrap {
+  padding-top: 40px;
+  align-items: flex-start;
+}
+.about ul li {
+  list-style: none;
+  font-size: 14px;
+  color: #5f717d;
+}
+.about ul li:first-child {
+  font-weight: 600;
+}
+.footerlinks {
+  justify-content: center;
+  gap: 50px;
+  padding: 20px 0;
+  font-size: larger;
+}
+.copyright {
+  text-align: center;
+  color: #5f717d;
+  padding-bottom: 20px;
+}
+.messenger {
+  position: fixed;
+  z-index: 99999;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.scrollTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: #293c43;
+  color: white;
+  cursor: pointer;
+  height: 60px;
+  line-height: 60px;
+  width: 60px;
+  text-align: center;
+  align-content: center;
+  border-radius: 50px;
+  font-size: 25px;
+}
+
+.gnb-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 100%;
+  }
+
+  .header-nav,
+  .about:not(:last-child),
+  .featuredpost,
+  .messenger,
+  .awards,
+  .scrollTop {
+    display: none;
+  }
+  .menu__mobile {
+    display: block;
+  }
+  .bg-image {
+    background-size: cover;
+  }
+  .subtitle {
+    font-size: 25px;
+  }
+  .con-btn button,
+  .con-btn button:hover {
+    width: 100%;
+  }
+  .gnb-mobile {
+    display: block;
+    font-size: 20px;
+    padding: 0 20px;
+  }
+
+  .statistics,
+  .footer-wrap,
+  .news-wrap {
+    flex-wrap: wrap;
+  }
+  .about {
+    flex: 100%;
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 20px;
+    justify-content: flex-start;
+  }
+
+  .download {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .menu__mobile .toggle-btn {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    right: 1rem;
+    top: 10px;
+    z-index: 10;
+  }
+
+  .menu__mobile .toggle-btn .line {
+    height: 2px;
+    width: 50%;
+    background-color: #444;
+    position: relative;
+  }
+
+  .menu__mobile .toggle-btn .line::before,
+  .menu__mobile .toggle-btn .line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #444;
+    transition: 0.4s;
+  }
+
+  .menu__mobile .toggle-btn .line::before {
+    top: -5px;
+  }
+
+  .menu__mobile .toggle-btn .line::after {
+    bottom: -5px;
+  }
+
+  .menu__mobile .bg {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    right: 1rem;
+    background-color: #fff;
+    top: 5px;
+    border-radius: 50%;
+    transition: 0.5s ease;
+  }
+
+  .menu__mobile .navigation {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+
+  .menu__mobile .navigation ul li {
+    list-style: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 200px;
+    text-align: center;
+    padding: 10px 1rem;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+
+  .menu__mobile .navigation ul li:hover {
+    color: orchid;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  /* adjacent selector + */
+
+  .menu__mobile .toggle:checked + .btn .toggle-btn .line {
+    background-color: transparent;
+  }
+
+  .menu__mobile .toggle:checked + .btn .toggle-btn .line::before {
+    transform: rotate(315deg);
+    top: 0;
+  }
+
+  .menu__mobile .toggle:checked + .btn .toggle-btn .line::after {
+    transform: rotate(-315deg);
+    bottom: 0;
+  }
+
+  .menu__mobile .toggle:checked ~ .bg {
+    transform: scale(100);
+  }
+
+  .menu__mobile .toggle:checked ~ .navigation {
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu__mobile .navigation ul li a {
+    color: #5f717d;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .subtitle {
+    z-index: -1;
+  }
+  .statistic-box:last-child {
+	  width: 100%
+	}
+}

@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="">
+</head>
+<body>
+   <header class="header">
+       <div class="header__top">
+           <div class="container">
+               <div class="flex-wrap">
+                   <div class="flex-wrap">
+                        <i id="cal" class="far fa-calendar-alt"></i>
+                        <p> 10 сарын 10, Ням</p>
+                   </div>
+                   <div class="flex-wrap">
+                        <p class="exchange flex-wrap gap-1">
+                            <img height="26" loading="lazy" src="https://content.ikon.mn/ikon/images/weather/conds/s30.png" alt="S30">
+                            <span>Улаанбаатар</span>
+                            <span class="redorange">0°C</span>
+                        </p>
+                        <p class="exchange flex-wrap gap-1">
+                            <i class="fas fa-arrow-down redorange"></i>
+                            <span>USD</span> 
+                            <img alt="Зураг" loading="lazy" src="https://content.ikon.mn/ikon/images/xrates/flat/USD.png" height="20">
+                            <span class="redorange">2848.45</span>
+                        </p>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="header__main">
+           <div class="container bg-image">
+               <img src="https://content.ikon.mn/ikon/images/ikon.png" alt="">
+           </div>
+       </div>
+       <div class="header__nav">
+           <div class="container">
+               <div class="flex-wrap">
+                   <ul class="navigation flex-wrap">
+                        <li class="active">Эхлэл</li>
+                        <li class="covid">Ковид-19</li>
+                        <li>Улс-төр</li>
+                        <li>Эдийн-засаг</li>
+                        <li>Эхлэл</li>
+                        <li>Ковид-19</li>
+                        <li>Улс-төр</li>
+                        <li>Эдийн-засаг</li>
+                   </ul>
+                   <div class="search flex-wrap">
+                       <input type="text">
+                       <button>
+                           <i class="fas fa-search"></i>
+                       </button>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </header>
+
+   <main class="main">
+       <div class="container">
+           <div class="flex-wrap start">
+               <div class="sidebar">
+                   <div class="sidebar__top">
+                       <img src="https://content.ikon.mn/raw/2021/9/22/12952/560x400__1_.jpg" alt="">
+                   </div>
+                   <div class="sidebar__scroll">
+                       <div class="sidebar__scroll-top flex-wrap">
+                           <div class="box">
+                                <i class="fas fa-history"></i>
+                           </div>
+                           <div class="box">
+                            <i class="fas fa-fire-alt"></i>
+                           </div>
+                       </div>
+                       <div class="sidebar__scroll-middle flex-wrap">
+                           <div class="sidebar__scroll-newslist">
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-banner">
+                                    <img src="https://content.ikon.mn/raw/2021/10/5/13000/ikon_B2_560x400.jpg" alt="">
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-banner">
+                                    <img src="https://content.ikon.mn/raw/2021/10/13/13021/for-ikon.mn.png" alt="">
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-banner">
+                                    <img src="https://content.ikon.mn/raw/2021/10/5/13000/ikon_B2_560x400.jpg" alt="">
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                                <div class="sidebar__scroll-news flex-wrap">
+                                    <div class="news-img">
+                                        <img src="https://content.ikon.mn/news/2021/10/13/e5uu7t_MPA_2025_x100.jpg" alt="">
+                                    </div>
+                                    <div class="news-desc">
+                                        <p>Тавантолгой түлш" ХХК-ийн 51% "Эрдэнэс Тавантолгой" ХК-д шилжиж, 2022 оны өвлөөс бизнесийн зарчмаар үйл ажиллагаагаа явуулахыг мэдэгдэв</p>
+                                        <i class="far fa-play-circle news-icon flex-wrap j-end"></i>
+                                        <ul class="news-bottom flex-wrap j-end">
+                                            <li>
+                                                <i class="fas fa-share"></i> 
+                                                <span>7</span>
+                                            </li>
+                                            <li>
+                                                <i class="far fa-comments"></i>
+                                                <span>1</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-history"></i> 
+                                                <span>22 минут</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                
+                                </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="sidebar__bottom">
+                        <img src="https://content.ikon.mn/raw/2021/10/5/12999/ikon_banner_3.gif" alt="">
+                        <div class="sidebar__bottom-sns flex-wrap">
+                            <button class="btn-primary"><i class="fab fa-facebook-f"></i>ТААЛАХ</button>
+                            <button class="btn-blue"><i class="fab fa-twitter"></i>ДАГАХ</button>
+                            <button class="btn-yellow"><i class="fas fa-rss"></i>ХОЛБОХ</button>
+                        </div>
+                    </div>
+               </div>
+               <div class="content">
+                   <div class="tpagination flex-wrap">
+                       <span>29 МИНУТЫН ӨМНӨ</span>
+                       <div class="pagination-list flex-wrap">
+                           <div class="pagination-item active">
+                               <span>2021/10/14</span>
+                            </div>
+                           <div class="pagination-item"></div>
+                           <div class="pagination-item"></div>
+                           <div class="pagination-item"></div>
+                           <div class="pagination-item"></div>
+                           <div class="pagination-item"></div>
+                           <div class="pagination-item"></div>
+                           <div class="pagination-item"></div>
+                           <div class="pagination-item"></div>
+                       </div>
+                       <i class="fas fa-caret-right redorange"></i>
+                       <span>3 ӨДӨР 2 ЦАГИЙН ӨМНӨ</span>
+                   </div>
+                   <div class="content__top">
+                       <div class="content-banner">
+                        <img src="https://content.ikon.mn/raw/2021/10/12/13017/jeep-a1.jpg" alt="">
+                       </div>
+                       <div class="content__top-bignews flex-wrap">
+                           <img src="https://content.ikon.mn//news/2021/4/27/waaozh_MPA-PHOTO-76_h450.jpg" alt="">
+                           <div class="bignews-box">
+                               <p class="bignews-title">РCR-аар батлагдсан халдварын 1,920 тохиолдол нэмэгдэж, 15 иргэн энджээ</p>
+                           </div>
+                       </div>
+                       <div class="content__top-news">
+                           <img src="https://content.ikon.mn//news/2021/10/13/v5brny___x220.jpg" alt="">
+                           <div class="card-description">
+                            С.Цогтбаяр: Ромеро Бриттогийн бүтээл хүн төрөлхтөнд...
+                        </div>
+                       </div>
+                       <div class="content__top-news">
+                        <img src="https://content.ikon.mn//news/2021/10/13/2jylrt___x220.jpg" alt="">
+                        <div class="card-description">
+                         С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                     </div>
+                    </div>
+                    <div class="content__top-news">
+                        <img src="https://content.ikon.mn//news/2021/10/13/m67qww_bb1_x220.jpg" alt="">
+                        <div class="card-description">
+                         С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                     </div>
+                    </div>
+                    <div class="content__top-news">
+                        <img src="https://content.ikon.mn//news/2021/10/13/te33th_tom222_x220.jpg" alt="">
+                        <div class="card-description">
+                         С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                     </div>
+                    </div>
+                    <div class="content__top-news">
+                        <img src="https://content.ikon.mn//news/2021/10/13/q7wb9f__4_poster_2_x220.jpg" alt="">
+                        <div class="card-description">
+                         С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                     </div>
+                    </div>
+                    <div class="content__top-news">
+                        <img src="https://content.ikon.mn//news/2021/10/14/vpon2d_MPA-PHOTO-2021-7-Z-7248_x220.jpg" alt="">
+                        <div class="card-description">
+                         С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                     </div>
+                    </div>
+                   </div>
+                   <h1 class="content__subtitle">ОНЦЛОХ МЭДЭЭ</h1>
+                   <div class="content__card">
+                       <div class="content__card-item">
+                            <img src="https://content.ikon.mn//news/2021/11/2/hiidh9_251252566_251702493682297_7807177127582279861_n_x220.jpg" alt="">
+                            <div class="card-description">
+                                С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                            </div>
+                        </div>
+                        <div class="content__card-item">
+                            <img src="https://content.ikon.mn//news/2021/11/2/hiidh9_251252566_251702493682297_7807177127582279861_n_x220.jpg" alt="">
+                            <div class="card-description">
+                                С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                            </div>
+                        </div>
+                        <div class="content__card-item">
+                            <img src="https://content.ikon.mn//news/2021/11/2/hiidh9_251252566_251702493682297_7807177127582279861_n_x220.jpg" alt="">
+                            <div class="card-description">
+                                С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                            </div>
+                        </div>
+                        <div class="content__card-item">
+                            <img src="https://content.ikon.mn//news/2021/11/2/hiidh9_251252566_251702493682297_7807177127582279861_n_x220.jpg" alt="">
+                            <div class="card-description">
+                                С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                            </div>
+                        </div>
+                   </div>
+                   <div class="content-banner pt1">
+                    <img src="https://content.ikon.mn/raw/2021/10/13/13022/Banner_1320x200.jpg" alt="">
+                   </div>
+                   <!-- covid -->
+                   <h1 class="content__subtitle">Ковид-19</h1>
+                   <div class="content__card">
+                       <div class="content__card-item">
+                            <img src="https://www.health.gov.au/sites/default/files/styles/square_thumbnail/public/images/publications/2020/07/coronavirus-covid-19---keep-physical-distancing-and-be-covidsafe.jpg?itok=Im56PbjP" alt="">
+                        </div>
+                        <div class="content__card-item">
+                            <img src="https://www.health.gov.au/sites/default/files/styles/square_thumbnail/public/images/publications/2020/07/coronavirus-covid-19---keep-physical-distancing-and-be-covidsafe.jpg?itok=Im56PbjP" alt="">
+                        </div>
+                        <div class="content__card-item">
+                            <img src="https://www.health.gov.au/sites/default/files/styles/square_thumbnail/public/images/publications/2020/07/coronavirus-covid-19---keep-physical-distancing-and-be-covidsafe.jpg?itok=Im56PbjP" alt="">
+                        </div>
+                        <div class="content__card-item">
+                            <img src="https://www.health.gov.au/sites/default/files/styles/square_thumbnail/public/images/publications/2020/07/coronavirus-covid-19---keep-physical-distancing-and-be-covidsafe.jpg?itok=Im56PbjP" alt="">
+                        </div>
+                   </div>
+                   <div class="content__btns">
+                       <div class="bg-grey">
+                           <button><span>Нийт</span></button>
+                           <button>Улаанбаатар</button>
+                           <button>Орон нутаг</button>
+                       </div>
+                   </div>
+                   <div class="content__chart">
+                       <img src="https://reliefweb.int/sites/reliefweb.int/files/styles/report-large/public/resources-pdf-previews/1485018-MNG_5W_snapshot_200323.png?itok=tEhPbwG7" alt="">
+                   </div>
+                   <!-- covid end -->
+                   <!-- topic -->
+                   <h1 class="content__subtitle">ХАЛУУН СЭДЭВ</h1>
+                   <div class="content__topics">
+                    <div class="content__category">Технологийн ертөнц</div>
+                    <div class="content__card">
+                        <div class="content__card-item">
+                             <img src="https://content.ikon.mn//news/2018/7/27/39f5a7_facebook_fall_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                         <div class="content__card-item">
+                             <img src="https://content.ikon.mn//news/2018/7/27/39f5a7_facebook_fall_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                         <div class="content__card-item">
+                             <img src="https://content.ikon.mn//news/2018/7/27/39f5a7_facebook_fall_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                         <div class="content__card-item">
+                             <img src="https://content.ikon.mn//news/2018/7/27/39f5a7_facebook_fall_x220.jpg" alt=""> 
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                    </div>
+                    <div class="tpagination flex-wrap pt1">
+                     <span>29 МИНУТЫН ӨМНӨ</span>
+                     <div class="pagination-list flex-wrap">
+                         <div class="pagination-item active">
+                             <span>2021/10/14</span>
+                          </div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                     </div>
+                     <i class="fas fa-caret-right redorange"></i>
+                     <span>3 ӨДӨР 2 ЦАГИЙН ӨМНӨ</span>
+                     </div>
+                     <div class="content__category">Инфографик</div>
+                    <div class="content__card">
+                        <div class="content__card-item">
+                             <img src="https://content.ikon.mn//news/2021/9/20/3gxbtq_ns18_2x_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                         <div class="content__card-item">
+                            <img src="https://content.ikon.mn//news/2021/9/20/3gxbtq_ns18_2x_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                         <div class="content__card-item">
+                            <img src="https://content.ikon.mn//news/2021/9/20/3gxbtq_ns18_2x_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                         <div class="content__card-item">
+                            <img src="https://content.ikon.mn//news/2021/9/20/3gxbtq_ns18_2x_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                    </div>
+                    <div class="tpagination flex-wrap pt1">
+                     <span>29 МИНУТЫН ӨМНӨ</span>
+                     <div class="pagination-list flex-wrap">
+                         <div class="pagination-item active">
+                             <span>2021/10/14</span>
+                          </div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                     </div>
+                     <i class="fas fa-caret-right redorange"></i>
+                     <span>3 ӨДӨР 2 ЦАГИЙН ӨМНӨ</span>
+                     </div>
+                     <div class="content__category">QUIZ</div>
+                    <div class="content__card">
+                        <div class="content__card-item">
+                             <img src="https://content.ikon.mn//news/2021/2/15/cp7eoe_cover_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                         <div class="content__card-item">
+                            <img src="https://content.ikon.mn//news/2021/2/15/cp7eoe_cover_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                         <div class="content__card-item">
+                            <img src="https://content.ikon.mn//news/2021/2/15/cp7eoe_cover_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                         <div class="content__card-item">
+                            <img src="https://content.ikon.mn//news/2021/2/15/cp7eoe_cover_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                    </div>
+                    <div class="tpagination flex-wrap pt1">
+                     <span>29 МИНУТЫН ӨМНӨ</span>
+                     <div class="pagination-list flex-wrap">
+                         <div class="pagination-item active">
+                             <span>2021/10/14</span>
+                          </div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                     </div>
+                     <i class="fas fa-caret-right redorange"></i>
+                     <span>3 ӨДӨР 2 ЦАГИЙН ӨМНӨ</span>
+                     </div>
+                     <div class="content__category">COVID-19</div>
+                    <div class="content__card">
+                        <div class="content__card-item">
+                             <img src="https://content.ikon.mn//news/2021/9/3/la6t08_MPA-PHOTO-2021-4-4479_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                         <div class="content__card-item">
+                            <img src="https://content.ikon.mn//news/2021/9/3/la6t08_MPA-PHOTO-2021-4-4479_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                         <div class="content__card-item">
+                            <img src="https://content.ikon.mn//news/2021/9/3/la6t08_MPA-PHOTO-2021-4-4479_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                         <div class="content__card-item">
+                            <img src="https://content.ikon.mn//news/2021/9/3/la6t08_MPA-PHOTO-2021-4-4479_x220.jpg" alt="">
+                             <div class="card-description">
+                                 С.Цогтбаяр: Ромеро Бриттогийн бүтээл...
+                             </div>
+                         </div>
+                    </div>
+                    <div class="tpagination flex-wrap pt1">
+                     <span>29 МИНУТЫН ӨМНӨ</span>
+                     <div class="pagination-list flex-wrap">
+                         <div class="pagination-item active">
+                             <span>2021/10/14</span>
+                          </div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                         <div class="pagination-item"></div>
+                     </div>
+                     <i class="fas fa-caret-right redorange"></i>
+                     <span>3 ӨДӨР 2 ЦАГИЙН ӨМНӨ</span>
+                     </div>
+                   </div>
+                   <div class="content__survey">
+                    <div class="content__category">Санал асуулга</div>
+                    <div class="content__survey-box flex-wrap">
+                        <div class="survey-img">
+                            <img src="https://content.ikon.mn//news/2021/10/26/tnm7js_iKON_ASUULGA_FINEDU_x220.jpg" alt="">
+                        </div>
+                        <div class="survey-item">
+                            <p>Та Санхүүгийн боловсрол олгох https://edu.golomtbank.com/ вэбсайтаас банк санхүү, эдийн засгийн талаарх цогц ойлголтыг авах боломжтой гэдгийг мэдэх үү?</p>
+                            <br>
+                            <b>(Нийт санал: 370)</b>  
+                            <div class="survey-radios pt1">
+                                <div class="flex-wrap">
+                                    <label for=""><input type="radio">Мэднэ</label>
+                                    <div class="surveyicon red">
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                    </div>
+                                    <b>9%</b>
+                                </div>
+                                <div class="flex-wrap">
+                                    <label for=""><input type="radio">Мэдэхгүй</label>
+                                    <div class="surveyicon primary">
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                        <i class="fas fa-child"></i>
+                                    </div>
+                                    <b>91%</b>
+                                </div>
+                            </div>
+                            <div class="survey-btn flex-wrap j-center">
+                                <button>САНАЛ ӨГӨХ</button>
+                            </div>   
+                            <div class="survey-icons flex-wrap j-center">
+                                <button class="twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                                <button class="facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                            </div>                 
+                        </div>
+                    </div>
+                    <div class="tpagination flex-wrap pt1">
+                        <span>29 МИНУТЫН ӨМНӨ</span>
+                        <div class="pagination-list flex-wrap">
+                            <div class="pagination-item active">
+                                <span>2021/10/14</span>
+                             </div>
+                            <div class="pagination-item"></div>
+                            <div class="pagination-item"></div>
+                            <div class="pagination-item"></div>
+                            <div class="pagination-item"></div>
+                            <div class="pagination-item"></div>
+                            <div class="pagination-item"></div>
+                            <div class="pagination-item"></div>
+                            <div class="pagination-item"></div>
+                        </div>
+                        <i class="fas fa-caret-right redorange"></i>
+                        <span>3 ӨДӨР 2 ЦАГИЙН ӨМНӨ</span>
+                        </div>
+                   </div>
+                   <!-- topic end -->
+               </div> 
+           </div> 
+       </div>
+   </main>
+   <footer class="footer">
+        <div class="footer_logo">
+            <div class="container">
+                <img alt="Зураг" loading="lazy" src="https://content.ikon.mn/ikon/images/footer@2x.png" height="25" valign="middle">
+            </div>            
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <ul class="footer_icons">
+                    <li>Бидний тухай</li>
+                    <li>Үйлчилгээний  нөхцөл</li>
+                    <li>Редакцын бодлого</li>
+                    <li>Сурталчилгаа байрлуулах</li>
+                    <li>Холбоо барих</li>
+                    <li>RSS</li> 
+                </ul>
+                <div class="copyright">
+                    © 2021 Бенекрафт ХХК
+                </div>
+            </div> 
+        </div>
+   </footer>
+   <a href="javascript:void(0);" id="scrollTop" onclick="window.scrollTo(0, 0);">
+    <i class="fas fa-arrow-up"></i>
+    </a>
+</body>
+</html>

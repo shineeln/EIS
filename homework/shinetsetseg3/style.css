@@ -1,0 +1,194 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dartboard {
+  margin: 30px;
+  width: 850px;
+  height: 850px;
+  position: relative;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.dartboard .ring {
+  position: absolute;
+  border-radius: 50%;
+  background-image: conic-gradient(
+    white 0% 5%,
+    black 5% 10%,
+    white 10% 15%,
+    black 15% 20%,
+    white 20% 25%,
+    black 25% 30%,
+    white 30% 35%,
+    black 35% 40%,
+    white 40% 45%,
+    black 45% 50%,
+    white 50% 55%,
+    black 55% 60%,
+    white 60% 65%,
+    black 65% 70%,
+    white 70% 75%,
+    black 75% 80%,
+    white 80% 85%,
+    black 85% 90%,
+    white 90% 95%,
+    black 95% 100%
+  );
+}
+
+.dartboard .ring:nth-child(odd) {
+  transform: rotate(28deg);
+}
+
+.dartboard .ring:nth-child(even) {
+  transform: rotate(10deg);
+}
+
+.dartboard .ring:nth-child(1) {
+  top: calc(98px / 2);
+  left: calc(98px / 2);
+  border: 1px solid white;
+  width: 750px;
+  height: 750px;
+}
+
+.dartboard .ring:nth-child(2) {
+  top: calc(150px / 2);
+  left: calc(150px / 2);
+  width: 700px;
+  height: 700px;
+}
+
+.dartboard .ring:nth-child(3) {
+  top: calc(350px / 2);
+  left: calc(350px / 2);
+  width: 500px;
+  height: 500px;
+}
+
+.dartboard .ring:nth-child(4) {
+  top: calc(400px / 2);
+  left: calc(400px / 2);
+  width: 450px;
+  height: 450px;
+}
+
+.dartboard .ring:nth-child(5) {
+  top: calc(770px / 2);
+  left: calc(770px / 2);
+  width: 80px;
+  height: 80px;
+  background: black;
+}
+
+.dartboard .ring:nth-child(6) {
+  top: calc(825px / 2);
+  left: calc(825px / 2);
+  width: 25px;
+  height: 25px;
+  background: white;
+}
+
+.ring > span {
+  position: absolute;
+  font-size: 48px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  transform: rotate(-10deg);
+}
+
+.ring > span:nth-child(odd) {
+  color: white;
+}
+/* dartscore */
+.ring > span:nth-child(1) {
+  top: 20px;
+  left: 273px;
+}
+.ring > span:nth-child(2) {
+  top: 20px;
+  left: 377px;
+}
+.ring > span:nth-child(3) {
+  top: 46px;
+  left: 454px;
+}
+.ring > span:nth-child(4) {
+  top: 98px;
+  left: 546px;
+}
+.ring > span:nth-child(5) {
+  top: 179px;
+  left: 586px;
+}
+.ring > span:nth-child(6) {
+  top: 269px;
+  left: 630px;
+}
+.ring > span:nth-child(7) {
+  top: 361px;
+  left: 617px;
+}
+.ring > span:nth-child(8) {
+  top: 451px;
+  left: 593px;
+}
+.ring > span:nth-child(9) {
+  top: 525px;
+  left: 549px;
+}
+.ring > span:nth-child(10) {
+  top: 582px;
+  left: 458px;
+}
+.ring > span:nth-child(11) {
+  bottom: 20px;
+  right: 288px;
+}
+.ring > span:nth-child(12) {
+  bottom: 20px;
+  right: 371px;
+}
+.ring > span:nth-child(13) {
+  bottom: 46px;
+  right: 470px;
+}
+.ring > span:nth-child(14) {
+  bottom: 98px;
+  right: 538px;
+}
+.ring > span:nth-child(15) {
+  bottom: 179px;
+  right: 603px;
+}
+.ring > span:nth-child(16) {
+  bottom: 269px;
+  right: 622px;
+}
+.ring > span:nth-child(17) {
+  bottom: 361px;
+  right: 617px;
+}
+.ring > span:nth-child(18) {
+  bottom: 451px;
+  right: 606px;
+}
+.ring > span:nth-child(19) {
+  bottom: 525px;
+  right: 540px;
+}
+.ring > span:nth-child(20) {
+  bottom: 582px;
+  right: 475px;
+}
+/* dartscore end */
