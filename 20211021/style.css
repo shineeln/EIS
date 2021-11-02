@@ -130,7 +130,7 @@ ul.header-nav li a {
 .statistic-box h4 {
   font-size: 19px;
   line-height: 24px;
-  color: #293c43 ;
+  color: #293c43;
   margin-bottom: 0.5rem;
 }
 .statistic-box h5 {
@@ -209,6 +209,7 @@ ul.header-nav li a {
 }
 .news-wrap .news {
   border-radius: 0.25rem;
+  box-shadow: 0px 12px 30px -11px rgb(0 0 0 / 43%);
 }
 .news .thumbnail {
   height: 200px;
@@ -285,24 +286,75 @@ ul.header-nav li a {
   color: #5f717d;
   padding-bottom: 20px;
 }
+.messenger {
+  position: fixed;
+  z-index: 99999;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.scrollTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: #293c43;
+  color: white;
+  cursor: pointer;
+  height: 60px;
+  line-height: 60px;
+  width: 60px;
+  text-align: center;
+  align-content: center;
+  border-radius: 50px;
+  font-size: 25px;
+}
+
+.gnb-mobile {
+  display: none;
+}
 
 @media screen and (max-width: 700px) {
-  .container {   
+  .container {
     width: 100%;
   }
 
-  .statistics, .footer-wrap, .news-wrap {
+  .header-nav,
+  .about:not(:last-child),
+  .featuredpost,
+  .messenger,
+  .awards,
+  .scrollTop {
+    display: none;
+  }
+  .bg-image {
+    background-size: cover;
+  }
+  .subtitle {
+    font-size: 25px;
+  }
+  .con-btn button,
+  .con-btn button:hover {
+    width: 100%;
+  }
+  .gnb-mobile {
+    display: block;
+    font-size: 20px;
+    padding: 0 20px;
+  }
+
+  .statistics,
+  .footer-wrap,
+  .news-wrap {
     flex-wrap: wrap;
   }
-
-  .subtitle {
-    font-size: 20px;
-  }
-
   .about {
     flex: 100%;
     margin-top: 20px;
-    text-align: center;
+    text-align: left;
+    margin-left: 20px;
+    justify-content: flex-start;
   }
 
   .download {
