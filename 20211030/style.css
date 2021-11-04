@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddfff7;
+}
+.monster-wrap {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+.monster {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #3b3f4b;
+  border-radius: 30px 30px 200px 200px;
+  overflow: hidden;
+}
+.face {
+  width: 100%;
+  height: 80%;
+  background-color: #96c691;
+  position: absolute;
+  z-index: 1;
+  top: 80px;
+  border-radius: 30px;
+}
+.hair {
+  width: 400px;
+  height: 80px;
+  position: absolute;
+  z-index: 1;
+  background-color: #3b3f4b;
+}
+.bangs1,
+.bangs2,
+.bangs3,
+.bangs4 {
+  position: absolute;
+  left: 35px;
+  border-color: transparent transparent #3b3f4b transparent;
+  border-style: solid;
+  border-width: 0px 20px 40px 20px;
+  height: 0px;
+  width: 0px;
+  transform: rotate(180deg);
+}
+
+.bangs2 {
+  left: 75px;
+}
+.bangs3 {
+  left: 115px;
+}
+.bangs4 {
+  left: 155px;
+}
+.eyebrow {
+  width: 140px;
+  height: 20px;
+  background-color: #3b3f4b;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 10px;
+}
+
+.eyebrow::after,
+.eyebrow::before {
+  content: "";
+  width: 12px;
+  height: 40px;
+  background-color: #3b3f4b;
+  position: absolute;
+  top: -10px;
+  border-radius: 5px;
+}
+
+.eyebrow::before {
+  left: 35px;
+}
+.eyebrow::after {
+  right: 30px;
+}
+
+.eye1,
+.eye2 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #3b3f4b;
+  position: absolute;
+  top: 80px;
+}
+.eye1 {
+  left: 80px;
+}
+.eye2 {
+  right: 80px;
+}
+.eye1::before,
+.eye2::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+}
+
+.mouth {
+  width: 160px;
+  height: 40px;
+  background-color: #3b3f4b;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 85px;
+  left: calc(400px / 2 - 80px);
+}
+
+.screws {
+  width: 400px;
+  height: 20px;
+  background-color: #a2a5a4;
+  position: absolute;
+  bottom: 90px;
+  z-index: 0;
+}
+.screws::before,
+.screws::after {
+  content: "";
+  width: 20px;
+  height: 40px;
+  background-color: #bdbebe;
+  position: absolute;
+  top: -10px;
+}
+.screws::before {
+  left: -20px;
+}
+.screws::after {
+  right: -20px;
+}
