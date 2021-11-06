@@ -1,16 +1,23 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    color: $mainColor;
-    font-size: 21px;
-    font-family: $alice;
+  color: $mainColor;
+  font-size: 21px;
+  font-family: $alice;
+  scroll-behavior: smooth;
 }
 
 a {
-    text-decoration: none;
-    font-family: $sacramento;
+  text-decoration: none;
+  font-family: $sacramento;
+}
+
+::selection {
+  background: #f15a22;
+  color: #fff;
+  text-shadow: none;
 }

@@ -1,0 +1,38 @@
+.shop {
+  text-align: center;
+  width: 85%;
+  margin: auto;
+  &__header {
+    margin: 1rem 0;
+    &-logo {
+      @include shopTitle($black, 0.7rem);
+    }
+    &-title {
+      @include commonHeader($mainColor, 2.2rem, $playfair, $borderColor);
+      @include headerBorder;
+    }
+    &-desc {
+      @include commonBtn($mainColor, 1.3rem, $alice);
+    }
+  }
+  .product {
+    &__item {
+      &-img {
+        img {
+          width: 100%;
+        }
+      }
+      &-title {
+        @include commonHeader($mainColor, 2.2rem, $playfair, $borderColor);
+        margin-top: 1rem;
+        div {
+          font-size: 1.35rem;
+        }
+      }
+      &-btn {
+        @include commonBtn($mainColor, 2.2rem, $sacramento);
+        margin: 1rem 0 4rem 0;
+      }
+    }
+  }
+}

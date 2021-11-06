@@ -1,0 +1,49 @@
+.intro {
+  background-color: $bg;
+  text-align: center;
+  margin: auto;
+  &__bg {
+    min-height: 580px;
+    background-image: url("https://cdn.shopify.com/s/files/1/0261/4687/t/7/assets/img_homepage_divider.jpg?v=10908527258020221636");
+    background-size: cover;
+    background-position: center 100%;
+  }
+  .bg2 {
+    background-image: url("https://cdn.shopify.com/s/files/1/0261/4687/t/7/assets/img_homepage_footer.jpg?v=5164167556579775996");
+    min-height: 434px;
+  }
+  &__about {
+    width: 85%;
+    margin: 0 auto;
+    .intro__header {
+      &-logo {
+        margin-top: 2rem;
+        @include shopTitle($black, 0.7rem);
+      }
+      &-title {
+        @include commonHeader($mainColor, 2.2rem, $playfair, $borderColor);
+        @include headerBorder;
+      }
+      &-desc {
+        @include commonBtn($mainColor, 1.3rem, $alice);
+      }
+    }
+    .intro__item {
+      &-logo {
+        margin-top: 2rem;
+        @include shopTitle($black, 0.7rem);
+      }
+      &-title {
+        @include commonHeader($mainColor, 2.2rem, $playfair, $borderColor);
+        @include headerBorder;
+        font-style: normal;
+        padding-top: 1rem;
+      }
+      &-desc {
+        @include commonBtn($mainColor, 1rem, $alice);
+        line-height: 1.6rem;
+      }
+      margin-bottom: 3rem;
+    }
+  }
+}
