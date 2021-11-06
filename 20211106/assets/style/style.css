@@ -91,7 +91,7 @@ a {
 }
 
 .header__desktop {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -226,11 +226,29 @@ a {
   text-shadow: 0 0 15px;
 }
 
+@media (min-width: 992px) {
+  .hero__header-title {
+    font-size: 4rem;
+  }
+}
+
 .hero__header-btn {
   color: #fff;
   font-size: 3.5rem;
   font-family: "Sacramento", cursive;
   text-shadow: 0 0 15px;
+  -webkit-transition: all 0.2s delay;
+  transition: all 0.2s delay;
+}
+
+.hero__header-btn:hover {
+  color: #c7d93b;
+}
+
+@media (min-width: 992px) {
+  .hero__header-btn {
+    font-size: 4rem;
+  }
 }
 
 .shop {
@@ -239,11 +257,11 @@ a {
   margin: auto;
 }
 
-.shop__header {
+.shop .figure .shop__header {
   margin: 1rem 0;
 }
 
-.shop__header-logo {
+.shop .figure .shop__header-logo {
   color: #000;
   letter-spacing: 5px;
   font-weight: 400;
@@ -251,7 +269,7 @@ a {
   text-transform: uppercase;
 }
 
-.shop__header-title {
+.shop .figure .shop__header-title {
   color: #1d1a19;
   font-size: 2.2rem;
   font-family: "Playfair Display SC", serif;
@@ -265,17 +283,23 @@ a {
   margin: 0 auto 1rem;
 }
 
-.shop__header-desc {
+@media (min-width: 992px) {
+  .shop .figure .shop__header-title {
+    font-size: 4rem;
+  }
+}
+
+.shop .figure .shop__header-desc {
   color: #1d1a19;
   font-size: 1.3rem;
   font-family: "Alice", serif;
 }
 
-.shop .product__item-img img {
+.shop .figure .product__item-img img {
   width: 100%;
 }
 
-.shop .product__item-title {
+.shop .figure .product__item-title {
   color: #1d1a19;
   font-size: 2.2rem;
   font-family: "Playfair Display SC", serif;
@@ -286,15 +310,62 @@ a {
   margin-top: 1rem;
 }
 
-.shop .product__item-title div {
+.shop .figure .product__item-title div {
   font-size: 1.35rem;
 }
 
-.shop .product__item-btn {
+@media (min-width: 992px) {
+  .shop .figure .product__item-title {
+    display: none;
+  }
+}
+
+.shop .figure .product__item-btn {
   color: #1d1a19;
   font-size: 2.2rem;
   font-family: "Sacramento", cursive;
   margin: 1rem 0 4rem 0;
+}
+
+@media (min-width: 992px) {
+  .shop .figure .product__item-btn {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .shop .figure .product__item {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
+}
+
+@media (min-width: 992px) {
+  .shop .figure .product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3rem;
+    position: relative;
+  }
+}
+
+@media (min-width: 992px) {
+  .shop .figure {
+    display: block;
+    width: 100%;
+    height: 100vh;
+  }
 }
 
 .intro {
@@ -315,12 +386,7 @@ a {
   min-height: 434px;
 }
 
-.intro__about {
-  width: 85%;
-  margin: 0 auto;
-}
-
-.intro__about .intro__header-logo {
+.intro__header-logo {
   margin-top: 2rem;
   color: #000;
   letter-spacing: 5px;
@@ -329,7 +395,7 @@ a {
   text-transform: uppercase;
 }
 
-.intro__about .intro__header-title {
+.intro__header-title {
   color: #1d1a19;
   font-size: 2.2rem;
   font-family: "Playfair Display SC", serif;
@@ -343,10 +409,21 @@ a {
   margin: 0 auto 1rem;
 }
 
-.intro__about .intro__header-desc {
+@media (min-width: 992px) {
+  .intro__header-title {
+    font-size: 4rem;
+  }
+}
+
+.intro__header-desc {
   color: #1d1a19;
   font-size: 1.3rem;
   font-family: "Alice", serif;
+}
+
+.intro__about {
+  width: 85%;
+  margin: 0 auto;
 }
 
 .intro__about .intro__item {
@@ -383,6 +460,26 @@ a {
   font-size: 1rem;
   font-family: "Alice", serif;
   line-height: 1.6rem;
+}
+
+@media (min-width: 992px) {
+  .intro__about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3rem;
+    position: relative;
+  }
 }
 
 .footer {

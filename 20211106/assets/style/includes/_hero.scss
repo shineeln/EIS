@@ -10,10 +10,20 @@
     &-title {
       @include commonHeader($white, 2.2rem, $playfair, $white);
       text-shadow: 0 0 15px;
+      @media (min-width: 992px) {
+        font-size: 4rem;
+      }
     }
     &-btn {
       @include commonBtn($white, 3.5rem, $sacramento);
       text-shadow: 0 0 15px;
+      transition: all 0.2s delay;
+      &:hover {
+        color: #c7d93b;
+      }
+      @media (min-width: 992px) {
+        font-size: 4rem;
+      }
     }
   }
 }
