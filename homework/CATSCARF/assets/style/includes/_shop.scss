@@ -1,0 +1,77 @@
+.shop {
+  text-align: center;
+  width: 85%;
+  margin: auto;
+  .figure {
+    .shop__header {
+      margin: 1rem 0;
+      &-logo {
+        @include shopTitle($black, 0.7rem);
+      }
+      &-title {
+        @include commonHeader($mainColor, 2.2rem, $playfair, $borderColor);
+        @include headerBorder;
+        @media (min-width: 992px) {
+          font-size: 4rem;
+        }
+      }
+      &-desc {
+        @include commonBtn($mainColor, 1.3rem, $alice);
+      }
+    }
+    .product {
+      &__item {
+        position: relative;
+        &-img {
+          img {
+            width: 100%;
+          }
+        }
+        &-title {
+          @include commonHeader($mainColor, 2.2rem, $playfair, $borderColor);
+          margin-top: 1rem;
+          div {
+            font-size: 1.35rem;
+          }
+        }
+        &-btn {
+          @include commonBtn($mainColor, 2.2rem, $sacramento);
+          margin: 1rem 0 4rem 0;         
+        }
+        .absolute {
+          @media (min-width: 992px) {
+            display: none;
+          }
+        }
+        @media (min-width: 992px) {
+          flex-basis: 33%;          
+        }
+        &:hover .absolute{
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: $caption;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          padding: 20% 0;
+          cursor: pointer;
+          .product__item-title,
+          .product__item-btn {
+            color: $white;
+          }
+        }
+      }
+      @media (min-width: 992px) {
+        @include flex(row, center, center, 3rem); 
+      }
+    }
+    @media (min-width: 992px) {
+      display: block;
+      width: 100%;
+      height: 100vh;
+    }
+  }
+}
