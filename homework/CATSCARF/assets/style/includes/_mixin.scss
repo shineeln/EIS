@@ -1,0 +1,36 @@
+@mixin flex($direction, $justify, $items, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $items;
+  gap: $gap;
+}
+
+@mixin shopTitle($color, $fsize) {
+  color: $color;
+  letter-spacing: 5px;
+  font-weight: 400;
+  font-size: $fsize;
+  text-transform: uppercase;
+}
+
+@mixin commonHeader($color, $fsize, $ffamily, $borderColor) {
+  color: $color;
+  font-size: $fsize;
+  font-family: $ffamily;
+  border-bottom: 1px solid $borderColor;
+  padding: 0 2rem 1rem 2rem;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+@mixin commonBtn($color, $fsize, $ffamily) {
+  color: $color;
+  font-size: $fsize;
+  font-family: $ffamily;
+}
+
+@mixin headerBorder {
+  width: max-content;
+  margin: 0 auto 1rem;
+}

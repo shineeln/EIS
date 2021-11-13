@@ -1,0 +1,29 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url(https://cdn.shopify.com/s/files/1/0261/4687/t/7/assets/img_homepage_slider1.jpg?v=839847293968337857);
+  background-size: cover;
+  background-position: center;
+  @include flex(row, center, center, 0);
+  &__header {
+    text-align: center;
+    &-title {
+      @include commonHeader($white, 2.2rem, $playfair, $white);
+      text-shadow: 0 0 15px;
+      @media (min-width: 992px) {
+        font-size: 4rem;
+      }
+    }
+    &-btn {
+      @include commonBtn($white, 3.5rem, $sacramento);
+      text-shadow: 0 0 15px;
+      transition: all 0.2s delay;
+      &:hover {
+        color: #c7d93b;
+      }
+      @media (min-width: 992px) {
+        font-size: 4rem;
+      }
+    }
+  }
+}
