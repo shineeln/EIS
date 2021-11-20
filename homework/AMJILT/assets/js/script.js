@@ -1,9 +1,22 @@
 ScrollReveal({ reset: true });
-ScrollReveal().reveal('.figure', {
-    delay: 300,
-    distance: '200px',
-    origin: 'bottom'
+ScrollReveal().reveal('.baruun', {
+    origin:right,
+    distance:'200px',
+    delay: 300
 });
+
+ScrollReveal().reveal('.heroscroll', {
+    origin:left,
+    distance:'100%',
+    delay: 1000
+});
+
+ScrollReveal().reveal('.overlay', {
+    origin:left,
+    distance:'100%',
+    delay: 2000
+});
+
 
 
 const swiper = new Swiper('.swiper', {
