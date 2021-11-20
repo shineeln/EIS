@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Tailwind</title>
+</head>
+<body>
+    <header class="flex w-full items-center justify-between bg-indigo-500 text-white font-bold uppercase">
+        <h1 class="text-2xl ml-4">LOGO</h1>
+        <ul class="text-sm hidden md:flex">
+            <li class="py-4 px-8 transition duration-300 hover:text-indigo-500 hover:bg-white">Home</li>
+            <li class="py-4 px-8 transition duration-300 hover:text-indigo-500 hover:bg-white">About</li>
+            <li class="py-4 px-8 transition duration-300 hover:text-indigo-500 hover:bg-white">Blog</li>
+            <li class="py-4 px-8 transition duration-300 hover:text-indigo-500 hover:bg-white">Contact</li>
+        </ul>
+
+        <div class="p-4 md:hidden">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="container my-4 mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="box h-36 bg-indigo-500"></div>
+                <div class="box h-36 bg-indigo-500"></div>
+                <div class="box h-36 bg-indigo-500"></div>
+                <div class="box h-36 bg-indigo-500"></div>
+                <div class="box h-36 bg-indigo-500"></div>
+                <div class="box h-36 bg-indigo-500"></div>
+                <div class="box h-36 bg-indigo-500"></div>
+                <div class="box h-36 bg-indigo-500"></div>
+            </div>
+        </section>
+        <section class="container my-4 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 grid-rows-3 gap-4">
+                <div class="box bg-purple-500 md:col-span-2 md:row-span-2"></div>
+                <div class="box h-36 bg-purple-500"></div>
+                <div class="box h-36 bg-purple-500"></div>
+                <div class="box h-36 bg-purple-500"></div>
+                <div class="box h-36 bg-purple-500"></div>
+                <div class="box h-36 bg-purple-500"></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
