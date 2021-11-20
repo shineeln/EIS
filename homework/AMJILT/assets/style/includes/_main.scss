@@ -1,6 +1,8 @@
 main {
-    .swiper {
-        width: 600px;
-        height: 300px;
-      }
+  .swiper-slide img:hover {
+    cursor: pointer;
+    filter: none;
+  }
+
+  
 }

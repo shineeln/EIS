@@ -2,17 +2,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $nunito;
 }
 
 body {
   color: $mainColor;
   font-size: 21px;
-  font-family: $nunito;
   scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
   color: $black;
-  font-family: $nunito;
+}
+
+hr {
+  width: 12%;
+    border-width: 2px;
+    border: 2px solid #76cfae;
+    margin-bottom: 30px!important;
+    margin-top: 10px!important;
+}
+
+hr.orange {
+  border: 2px solid #ed812f;
+  margin-left: 88%;
+}
+
+hr.center {
+  margin-left: 45%;
 }
