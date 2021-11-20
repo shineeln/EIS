@@ -1,0 +1,12 @@
+header {
+    background-color: #e3f2fd;
+    color: #212529;
+}
+
+.card-img-top{
+    height: 100%;
+}
+
+.card-title {
+    text-align: center;
+}
