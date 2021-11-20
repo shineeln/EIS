@@ -17,39 +17,41 @@
 	<script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
-<body>
-	<div class="hero relative w-full mb-40 h-screen bg-red-400">
-		<div class="absolute w-full h-full bg-white bg-opacity-30"></div>
-	</div>
-
-
-	<header class="header flex flex-wrap items-center justify-between px-2 py-3">
-		<div class="logo w-full">
-			<img src="https://amjilt.com/landing-assets/upload/logo-barrel8-1.png" alt="">
+<body class="overflow-x-hidden">
+	<header class="w-full">
+		<div class="container absolute z-10 flex items-center justify-between px-12">
+			<div class="logo w-40">
+				<img class="w-full" src="https://amjilt.com/landing-assets/upload/logo-barrel8-1.png" alt="">
+			</div>
+			<ul class="flex text-white text-sm uppercase font-bold">
+				<li class="rounded-3xl px-5 py-2.5 hover:bg-white hover:text-blue-400"><a href="#shop" class="active">Мэдээ</a></li>
+				<li class="rounded-3xl px-5 py-2.5 hover:bg-white hover:text-blue-400"><a href="#about">Багш.мн</a></li>
+				<li class="rounded-3xl px-5 py-2.5 hover:bg-white hover:text-blue-400"><a href="#thoughts">Одоо суръя</a></li>
+				<li class="rounded-3xl px-5 py-2.5 hover:bg-white hover:text-blue-400"><a href="#about">Зуузуугийн найзууд</a></li>
+				<li class="rounded-3xl px-5 py-2.5 hover:bg-white hover:text-blue-400 border border-white-600 ml-3"><a href="#contact">Нэвтрэх</a></li>
+			</ul>
 		</div>
-		<ul class="nav lg:flex flex-grow items-center list-none">
-			<li><a href="#shop" class="active">Мэдээ</a></li>
-			<li><a href="#about">Багш.мн</a></li>
-			<li><a href="#thoughts">Одоо суръя</a></li>
-			<li><a href="#about">Зуузуугийн найзууд</a></li>
-			<li><a href="#contact">Нэвтрэх</a></li>
-		</ul>
+		
 	</header>
 
-	<main>
-		<section class="hero">
-			<div class="hero__img">
+	<section class="hero w-100 relative">
+		<div class="h-screen">
+			<img class="object-cover w-full h-full" src="https://amjilt.com/landing-assets/upload/background-slider-app.jpg" alt="">
+		</div>
+		<div class="hero__box">
+			<div class="img">
 				<img src="" alt="">
 			</div>
-			<div class="hero__box">
-				<h1 class="title"><strong>АМЖИЛТ 2.0</strong> СУРГУУЛИЙН ЦОГЦ СИСТЕМ</h1>
-				<p>Сургуулийн менежментийн ТӨГС удирдахуй</p>
-				<div class="button">
-					<a class="playstore" href="#"><img src="" alt=""></a>
-					<a class="appstore" href="#"><img src="" alt=""></a>
-				</div>
+			<h1 class="title"><strong>АМЖИЛТ 2.0</strong> СУРГУУЛИЙН ЦОГЦ СИСТЕМ</h1>
+			<p>Сургуулийн менежментийн ТӨГС удирдахуй</p>
+			<div class="button">
+				<a class="playstore" href="#"><img src="" alt=""></a>
+				<a class="appstore" href="#"><img src="" alt=""></a>
 			</div>
-		</section>
+		</div>
+	</section>
+	
+	<main>
 		<section>
 			<div class="container mx-0">
 				<!-- Slider main container -->
