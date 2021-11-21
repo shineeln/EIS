@@ -4,5 +4,16 @@ main {
     filter: none;
   }
 
-  
+  .service-item {
+    transition: ease;
+  }
+  .service-item:hover .service-item>i {
+    animation-name: example;
+    animation-duration: 4s;
+  }
+
+  @keyframes example {
+    from {transform: scale(1);}
+    to {transform: scale(1.5);}
+  }
 }

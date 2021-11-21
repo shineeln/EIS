@@ -40,4 +40,38 @@ main .swiper-slide img:hover {
   -webkit-filter: none;
           filter: none;
 }
+
+main .service-item {
+  -webkit-transition: ease;
+  transition: ease;
+}
+
+main .service-item:hover .service-item > i {
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+@-webkit-keyframes example {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes example {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
 /*# sourceMappingURL=style.css.map */
