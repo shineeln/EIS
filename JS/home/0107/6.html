@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num1 = prompt("too1");
+        var sum = 0;
+        var lengthNum = num1.toString().length;
+
+        for (var i = 0; i < lengthNum; i++) {
+            sum += num1 % 10
+            num1 = Math.floor(num1 / 10)
+        }
+        alert(sum)
+    </script>
+</body>
+
+</html>
