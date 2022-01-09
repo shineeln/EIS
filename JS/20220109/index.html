@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // default parameters
+        function f1(param = 0) {
+            return param;
+        }
+
+        // rest parameter, spread operator, arr-g arr-luu push hj bn
+        var arr = [12, 13, 14];
+        var arr1 = [...arr];
+
+        var obj = {
+            ner : 'shinee',
+            mergejil : 'dev'
+        }
+
+        var obj1 = {
+            ...obj,
+            ner : 'tsetseg'
+        }
+
+        function testRestParams(...arguments) {
+            console.log(arguments)
+            var i = 0;
+            while(i<arguments.length) {
+                console.log(arguments[i]);
+                i++
+            }
+        }
+
+        // object loop (for in)
+        var testobj = {
+            ner:'shinee',
+            mergejil:'dev',
+            hobbies:['watching', 'listening']
+        }
+
+        for(var pro in testobj) {
+            console.log(pro + ': '+ testobj[pro])
+        }
+    </script>
+</body>
+</html>
