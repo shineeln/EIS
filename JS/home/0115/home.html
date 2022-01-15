@@ -17,6 +17,30 @@
             result = sum.toString().split('');
             return result.reverse();
         }
+
+        function bod2(str) {
+            var result = [];
+            var string = str.charAt(0);
+
+            for (var i = 0; i < str.length; i++) {
+                if (!string.includes(str[i])) {
+                    string += str[i];
+                    result.push(string.length);
+                } else {
+                    i -= string.length;
+                    string = '';
+                }
+            }
+
+            var max = 0;
+            for (var k = 0; k < result.length; k++) {
+                if (max < result[k]) {
+                    max = result[k];
+                }
+            }
+            return max;
+
+        }
     </script>
 </body>
 
