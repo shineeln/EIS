@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick sort</title>
+</head>
+
+<body>
+    <script>
+        function findIndex(arr, start = 0, end = arr.length + 1) {
+            function change(array, i, j) {
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+
+            var ehniiUtga = arr[start];
+            var changeIndex = start;
+
+            for (var i = start + 1; i < arr.length; i++) {
+                if (ehniiUtga > arr[i]) {
+                    changeIndex++
+                    change(arr, changeIndex, i);
+                }
+            }
+            change(arr, start, changeIndex);
+            console.log(arr)
+
+            return changeIndex;
+        }
+
+        var swapIndex = findIndex([4, 8, 2, 1, 6, 5, 7, 3])
+
+        function quickSort(arr, left = 0, right = arr.length - 1) {
+            if (left < right) {
+                var mainIndex = findIndex(arr, left, right);
+
+                quickSort(arr, left, mainIndex - 1);
+
+                quickSort(arr, mainIndex + 1, right);
+            }
+            return arr;
+        }
+        var sortArr = quickSort([4, 8, 2, 1, 6, 5, 7, 3])
+    </script>
+</body>
+
+</html>
