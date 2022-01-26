@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radix sort</title>
+</head>
+
+<body>
+    <script>
+        function getDigit(num, i) {
+            return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10;
+        }
+
+        function digitCount(num) {
+            return Math.floor(Math.log10(Math.abs(num))) + 1;
+        }
+
+        function mostDigit(nums) {
+            let maxDigits = 0;
+            for (var i = 0; i < nums.length; i++) {
+                maxDigits = Math.max(maxDigits, digitCount(nums[i]))
+            }
+            return maxDigits;
+        }
+
+        function radixSort(nums) {
+            var maxDigitsCount = mostDigit(nums);
+            for (let i = 0; i < maxDigitsCount; i++) {
+                var digitBuckets = Array.from({ length: 10 }, () => [])
+                for (let j = 0; j < nums.length; j++) {
+                    var digit = getDigit(nums[j], i);
+                    digitBuckets[digit].push(nums[j]);
+                }
+
+                nums = [].concat(...digitBuckets);
+            }
+            return nums;
+        }
+
+        var result = radixSort([23, 345, 5467, 12, 2345, 9865])
+    </script>
+</body>
+
+</html>
