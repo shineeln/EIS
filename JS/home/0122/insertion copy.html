@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insertionSort</title>
+</head>
+
+<body>
+    <script>
+        function insertionSort(arr) {
+            for (var first = 1; first < arr.length; first++) {
+                for (var second = first - 1; second >= 0; second--) {
+                    if (arr[second] > arr[first]) {
+                        var current = arr[second];
+                        arr[second] = arr[first];
+                        arr[first] = current;
+                        first--
+                    }
+                }
+            }
+            return arr;
+        }
+    </script>
+</body>
+
+</html>
