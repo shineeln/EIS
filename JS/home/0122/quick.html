@@ -5,13 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bubble sort</title>
+    <title>Quick sort</title>
 </head>
 
 <body>
     <script>
-        function quickSort() {
+        function getIndex(arr, start = 0, end = arr.length) {
+            var first = arr[start];
+            var left = [];
+            var right = [];
+            var i = start + 1;
+            while (i < arr.length) {
+                if (first > arr[i]) {
+                    left.push(arr[i])
+                } else {
+                    right.push(arr[i])
+                }
+                i++
+            }
+            arr = [...left, first, ...right];
+            return arr;
+        }
 
+        function quickSort(arr, start = 0, end = arr.length) {
+            if (arr.length < 1) {
+                return;
+            }
+            var start = arr[start];
+            var pivot = getIndex(arr, 0, arr.length);
+            quickSort(pivot.slice(0, pivot.indexOf(start)), 0, pivot.indexOf(start))
+            quickSort(pivot.slice(pivot.indexOf(start) + 1), pivot.indexOf(start) + 1);
+            return arr;
         }
     </script>
 </body>
