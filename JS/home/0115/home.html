@@ -13,9 +13,13 @@
         function bod1(l1, l2) {
             var result = [];
             var sum = 0;
-            sum = parseInt(l1.join('')) + parseInt(l2.join(''));
+            sum = parseInt(l1.reverse().join('')) + parseInt(l2.reverse().join(''));
             result = sum.toString().split('');
-            return result.reverse();
+            var intRes = [];
+            result.map(function(item) {
+                intRes.push(parseInt(item, 10));
+            });
+            return intRes.reverse();
         }
 
         function bod2(str) {
@@ -36,6 +40,36 @@
             }
             return max;
 
+        }
+
+        function findMedianSortedArrays(nums1, nums2) {
+            var merged = [];
+            var median = 0;
+            merged = nums1.concat(nums2);
+            merged.sort(function(a, b){return a - b});
+
+
+            console.log(merged)
+            if(merged.length % 2) {
+                median = merged[Math.floor(merged.length/2)]
+            } else {
+                median = (merged[merged.length/2 - 1] + merged[merged.length/2])/2;
+            }
+            
+            return median;
+        }
+
+        function longestPalindrome(str) {
+
+            var testStr = "";
+            for(var i=0; i<str.length; i++) {
+                for(var k=0; k<testStr.length; i++) {
+                    if(str.length == 1 || testStr[i] == str[i] || testStr[i-1] == str[i]) {
+                        testStr += str;
+                    }
+                }               
+            }
+            return testStr
         }
     </script>
 </body>
