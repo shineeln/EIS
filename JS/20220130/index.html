@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumMatrix(A , B){
+            var C;
+            var 
+            var aDimension = calculateDimension(A);
+            var bDimension = calculateDimension(B);
+
+            if(aDimension.row === bDimension.row && aDimension.column === bDimension.column){
+                C = Array.from({length: aDimension.row} , function(){
+                    return [];
+                });
+                for(var row = 0; row < A.length; row++){
+                    for(var column = 0; column < A[row].length; column++){
+                        var el = A[row][column] + B[row][column];
+                        C[row].push(el);
+                    }
+                }
+            } else {
+                return "Invalid dimensions"
+            }
+
+            return C;
+        }
+
+        function multiple(matrix, num = 1) {
+            if(!num || num === 1) {
+                return matrix;
+            }
+
+            for (row = 0; row < matrix.length; row++) {
+                for (col = 0; col < matrix[row].length; col++) {
+                    matrix[row][col] = matrix[row][col] * num                    
+                }                
+            }
+        }
+
+        function calculateDimension(matrix){
+            var row , column;
+            row = matrix.length;
+            column = matrix[0].length;
+            return {
+                row: row,
+                column: column
+            }
+        }
+        
+        
+    </script>
+</body>
+</html>
