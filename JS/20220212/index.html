@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES^</title>
+</head>
+<body>
+    <script>
+
+        // let const variable
+        // `${huwisagchiin ner}`
+        // arrow function
+
+        const myfunction = () => {
+            console.log('hi')
+        }
+
+        const testArrow = () => 12
+
+        const bubbleSort = arr => {
+            return arr;
+        }
+
+        // function - declaritive
+        // let - imparative
+
+        testFunc()
+
+        function testFunc() {
+            console.log("gug")
+        }
+
+
+        const testing = () => {
+            console.log("sdfsdf")
+        }
+        
+        function myFuncc(arg) {
+            arg()
+        }
+
+        myFuncc(cb)
+
+        function cb() {
+            console.log("cb")
+        }
+
+        myFuncc((ner) =>{
+            console.log(ner);
+        })
+
+        function valCallback(arg, ner) {
+            arg(ner)
+        }
+
+        valCallback((ner)=>
+        {
+            console.log(ner)
+        }, 'bla')
+
+        // object function
+
+        // this keyword ni object function dotor objectrugee handana
+        let obj = {
+            pro: function() {
+                console.log('hi')
+            },
+            testObject() {
+                console.log('')
+            },
+            arrow:() => {
+                console.log('this is arrow ene dotor this tulhuur ugiig hereglej bolohgui')
+            }
+        }
+
+        // destructure - buttsiig n medeh
+        let array123 = [12, 15, 17];
+        let [x] = array123;
+        // hamgiin ehnii ogogdliig x utgand awch baina, tgher x ni 12
+        // let [x,y] = array y ni 15
+
+        let [,,z] = array123;
+
+
+        // object destruction
+        let object = {
+            ner : "narada",
+            mergejil: "design"
+        }
+
+        let {ner} = object;
+
+        // pro.bind(object);
+        // ingehgui bol this utga global dom-iig awaad bna. tgher bind gsen function ashiglaj baina
+        // let {pro} = object;
+
+
+        // callback
+        // forEach, map, filter, find, findIndex
+
+        let array = [123, 34, 54, 32, 432, 100, 56];
+
+        array.forEach(function(el, index) {
+            console.log(el, index)
+        })
+        // utga butsaahgui
+        // array-iin buh element deer neg udaa callback function-iig duudna
+
+        // map- shine massive uusgej ogno'
+        // buh ogogdliig ymr negen baidlaar oorchlohiig n oorchlood shine massive uusgej baina
+        // zaawal utga butsaana return hiih
+        let mapped = array.map((el, index) => {
+            return el * index;
+        })
+
+
+        // filter - todorhoi nohtsol hangasan ogogdluudiig tsugluulj shine massiv uusgene
+        // boolean utga butsaana
+        let filteredArray = array.filter(el => {
+            if(el < 100) {
+                return true
+            }
+
+            return false;
+            // return el < 100
+        })
+
+        // find - massiv dotroos ogogdol haina, hamgiin ehend taarsan elementiig barij awaad zogsono
+        let item = array.find(el => el > 100);
+
+
+        // findIndex - indexiig n hadgalj awna, ehnii taarsan 
+        let itemIndex = array.findIndex(el => el > 100);
+
+
+        let users = [
+            {
+                ner: "shinee",
+                email: "shinee@mail.com"
+            },{
+                ner: "shinee",
+                email: "shinee2@mail.com"
+            },{
+                ner: "shinee",
+                email: "shinee3@mail.com"
+            },{
+                ner: "shinee",
+                email: "shinee4@mail.com"
+            },{
+                ner: "shinee",
+                email: "shinee5@mail.com"
+            },{
+                ner: "shinee",
+                email: "shinee6@mail.com"
+            },{
+                ner: "shinee",
+                email: "shinee7@mail.com"
+            },{
+                ner: "shinee",
+                email: "shinee8@mail.com"
+            },{
+                ner: "shinee",
+                email: "shinee9@mail.com"
+            },{
+                ner: "shinee",
+                email: "shinee10@mail.com"
+            },
+        ]
+
+        function updatedUserData(email, updatedEmail, updateNer) {
+            users.map(el => {
+                if(el.email == email) {
+                    if(updatedEmail) {
+                        el.email = updatedEmail
+                    }
+                    if(updateNer) {
+                        el.ner = updateNer;
+                    }
+                }
+
+                return el;
+            })
+        }
+
+
+        function deleteUser(email) {
+            const updatedUsersList = users.filter(user => user.email !== email)
+            users = [...updatedUsersList];
+        }
+    </script>
+</body>
+</html>
