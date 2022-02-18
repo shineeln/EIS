@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ES^</title>
 </head>
+
 <body>
     <script>
         // OOP
@@ -23,16 +25,16 @@
 
 
         User.prototype.h1 = "fjdgndkfg";
-        User.prototype.getName = function() {
+        User.prototype.getName = function () {
             return this.username;
         }
 
-        User.prototype.setName = function(name) {
+        User.prototype.setName = function (name) {
             this.username = name;
             return this.username;
         }
 
-        User.prototype.setEmail = function(email) {
+        User.prototype.setEmail = function (email) {
             this.email = email;
             return this.email;
         }
@@ -40,18 +42,18 @@
         const user = new User("test", "test@mail.com");
         const user1 = new User("shinee", "shinee@mail.com")
 
-        let array = [23,34,34,52,12,3]
+        let array = [23, 34, 34, 52, 12, 3]
 
-        Array.prototype.customForEach = function(callback) {
+        Array.prototype.customForEach = function (callback) {
             for (var i = 0; i < this.length; i++) {
                 callback(this[i], i);
             }
         }
 
-        Array.prototype.customFilter = function(callback) {
+        Array.prototype.customFilter = function (callback) {
             var result = [];
             for (var i = 0; i < this.length; i++) {
-                if(callback(this[i], i)) {
+                if (callback(this[i], i)) {
                     result.push(this[i])
                 }
             }
@@ -63,14 +65,14 @@
             console.log(i + ": " + el)
         })
 
-        const twenty = array.customFilter(function(el, i) {
-            return el<20;
+        const twenty = array.customFilter(function (el, i) {
+            return el < 20;
         })
-        
-        Array.prototype.customFind = function(callback) {
+
+        Array.prototype.customFind = function (callback) {
             var result = undefined;
             for (var i = 0; i < this.length; i++) {
-                if(callback(this[i], i)) {
+                if (callback(this[i], i)) {
                     result = this[i]
                     break;
                 }
@@ -89,18 +91,17 @@
             this.correctAnswer = correctAnswer;
         }
 
-        const question = new Quiz("mongol hel hden usegtei we?", [12,23,35,33], 2);
+        const question = new Quiz("mongol hel hden usegtei we?", [12, 23, 35, 33], 2);
 
-
-        Quiz.prototype.printQuestion = function() {
+        Quiz.prototype.printQuestion = function () {
             console.log(this.question);
             this.answers.forEach((element, index) => {
                 console.log(`${index} : ${element}`);
             });
         }
 
-        Quiz.prototype.checkAnswer = function(answer) {
-            if(answer == this.correctAnswer) {
+        Quiz.prototype.checkAnswer = function (answer) {
+            if (answer == this.correctAnswer) {
                 console.log("zow hariullaa")
                 return true;
             }
@@ -113,4 +114,5 @@
 
     </script>
 </body>
+
 </html>
