@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class UserList {
+            list = [];
+            insert(user) {
+                const userExists = this.list.find(el => el.email === user.email);
+                if (userExists) {
+                    return "Email already exists..."
+                }
+                this.list.push(user);
+                return "Success..."
+            }
+            update(id, username, email, password, number) {
+                const index = this.list.findIndex(el => el.id === id);
+                this.list[index].username = username;
+                this.list[index].email = email;
+                this.list[index].password = password;
+                this.list[index].number = number;
+                return "Success..."
+            }
+            delete(id) {
+                this.list = this.list.filter(el => el.id !== id);
+            }
+            detail(id) {
+                const index = this.list.findIndex(el => el.id === id);
+                return this.list[index];
+            }
+        }
+
+        class User {
+            constructor(username, email, password, number) {
+                this.username = username;
+                this.email = email;
+                this.password = password;
+                this.number = number;
+                this.id = Math.random().toString().split(".")[1];
+            }
+        }
+
+        let userList = new UserList();
+        userList.insert(new User("shinee", "maik", "123", 32423423));
+    </script>
+</body>
+
+</html>
