@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES^</title>
+</head>
+
+<body>
+    <script>
+        // baiguulagch function
+        // constructor function ni parameteraa huleej awna
+        // shuud property ashiglaj bolno
+        // huwisagch zarlahad let var const hereggui
+        // method uusgehdee prototype gj handah shaardlagagui shuud function*() zarlaal bloo
+
+        // methodical baiguulagch functionooroo handaj bolno static 
+        // prototypical baiguulagch functionooto handaj chadahgu 
+
+        // class udamshuulah - inheritance 
+
+        // class User {
+        //     username = 123;
+        //     constructor(username, email) {
+        //         this.username = username;
+        //         this.email = email;
+        //     }
+        //     getName() {
+        //         return this.username;
+        //     }
+        //     setName(username) {
+        //         this.username = username;
+        //         return this.username
+        //     }
+        //     static methodical() {
+        //         console.log("5645")
+        //     }
+        // }
+
+
+        // const user = new User("Shinee", "shinee@mail.com");
+
+        // class PremiumUser extends User {
+        //     constructor(username, email, number) {
+        //         super(username, email)
+        //         this.number = number
+
+        //     }
+        // }
+
+        // const premium = new PremiumUser("shinee", "email", 235234234)
+
+// username
+        class User {
+            users = [];
+            constructor(username, email, password, number) {
+                this.username = username;
+                this.email = email;
+                this.password = password;
+                this.number = number;
+                this.id = Math.random().toString().split(".")[1];
+            }
+
+            save() {
+                let dupl = false;
+                this.users.forEach(el => {
+                    if(el.email == this.email) {
+                        dupl = true;
+                    }
+                })
+                if(!dupl) {
+                    this.users.push(this);
+                } else {
+                    alert("duplicate")
+                }
+            }
+        }
+
+        class UserList {
+            users = [];
+        }
+
+        const user = new User("shinee", "maik", "123", 32423423)
+
+    </script>
+</body>
+
+</html>
