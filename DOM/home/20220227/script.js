@@ -8,12 +8,12 @@
 // burtgeh tovch
 
 function valid() {
-    const password = document.querySelector('password');
-    const checkPassword = document.querySelector('checkPassword');
+    const password = document.querySelector('#password');
+    const checkPassword = document.querySelector('#checkPassword');
     if (password.value != checkPassword.value) {
-        alert("Password not match")
+        console.log("Password not match")
     } else {
-        alert("Password match")
+        console.log("Password match")
     }
     return false;
 }
@@ -47,7 +47,7 @@ function checkPhone(inp) {
     validation(regex, inp);
 }
 
-function checkPassword(inp) {
+function checkPass(inp) {
     var regex = /^\w{6,9}$/
     validation(regex, inp);
 }
