@@ -9,31 +9,35 @@ const firstname = document.querySelector('#firstname');
 const lastname = document.querySelector('#lastname');
 const number = document.querySelector('#number');
 const password = document.querySelector('#password');
+const email = document.querySelector('#email');
 
 let users;
 init();
 class User {
-    constructor(firstname , lastname , number , password){
+    constructor(firstname , lastname , number , password, email){
         this.firstname = firstname;
         this.lastname = lastname;
         this.number = number;
         this.password = password;
+        this.email = email;
         this.id = Math.random().toString().split('.')[1]; 
     };
 };
-
 function init(){
     if(localStorage.users){
         users = JSON.parse(localStorage.users);
     } else {
         users = [];
     }
+    if(localStorage.loggedUser) {
+        location.pathname = "/DOM/20220312/profile.html"
+    }
 }
 
 btn?.addEventListener('click' , function(event){
     event.preventDefault();
     if(firstname.value.trim() !== '' && lastname.value.trim() !== '' && number.value.trim() !== '' && password.value.trim() !== '') {
-        const user = new User(firstname.value , lastname.value , number.value , password.value);
+        const user = new User(firstname.value , lastname.value , number.value , password.value, email.value);
         users.push(user);
         clearForm();
         localStorage.setItem("users" , JSON.stringify(users));
@@ -46,8 +50,10 @@ btn?.addEventListener('click' , function(event){
 login?.addEventListener('click', function() {
     event.preventDefault();
     users.find(function(event) {
-        if(event.firstname == firstname.value && event.password == password.value) {
+        if(event.email == email.value && event.password == password.value) {
             console.log(event)
+            localStorage.setItem('loggedUser', JSON.stringify(event));
+            window.location.pathname = '/DOM/20220312/profile.html'
         } else {
             console.log('no')
         }
@@ -59,6 +65,7 @@ function clearForm(){
     lastname.value = '';
     number.value = '';
     password.value = '';
+    email.value = '';
 }
 
 // хэрэглэгч бүртгэх форм хий...
