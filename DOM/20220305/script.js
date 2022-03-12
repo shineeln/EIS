@@ -1,11 +1,54 @@
-const sentence = "My name is Narada. My favorite color is color. Is it sunday? His name is Bold 123";
-const jijiguseg = /[a-z]/g;
-const tomuseg = /[A-Z]/g;
-const too = /[0-9]/g;
-console.log(sentence.match(jijiguseg).length > 0)
-console.log(sentence.match(tomuseg).length > 0);
-console.log(sentence.match(too).length > 0);
+function valid() {
+    const password = document.querySelector('#password');
+    const checkPassword = document.querySelector('#checkPassword');
+    if (password.value != checkPassword.value) {
+        console.log("Password not match")
+    } else {
+        console.log("Password match")
+        user.email = document.querySelector('#email').value;
+        user.firstname = document.querySelector('#firstname').value;
+        user.lastname = document.querySelector('#lastname').value;
+        user.phone = document.querySelector('#phone').value;
+        user.password = document.querySelector('#password').value;
 
-const url = "https://www.google.com/search?q=special+character+url+encoding&rlz=1C5CHFA_enMN992MN992&oq=special+character+url+&aqs=chrome.0.0i512j69i57j0i10i22i30j0i22i30j0i10i22i30l2j0i22i30l2j0i10i22i30l2.6988j0j7&sourceid=chrome&ie=UTF-8"
-const specialChar = /[^a-zA-z0-9_]/g;
-console.log(url.match(specialChar));
+        users.push(user);
+        console.log(users);
+
+        sessionStorage.setItem('users', JSON.stringify(users));
+    }
+    return false;
+}
+
+function validation(regex, inp) {
+    if (regex.test(inp.value)) {
+        inp.style.borderColor = "silver";
+        return true;
+    } else {
+        inp.style.borderColor = "red";
+    }
+}
+
+function checkEmail(inp) {
+    var regex = /^\w+@\w+\./;
+    validation(regex, inp);
+}
+
+function checkPhone(inp) {
+    var regex = /\d{8}$/
+    validation(regex, inp);
+}
+
+
+const users = [];
+const user = {
+    email:'',
+    firstname:'',
+    lastname:'',
+    phone:0,
+    password:'',
+    id:Math.random().toString().split('.')[1]
+}
+
+document.addEventListener('load', function() {
+    users = sessionStorage.getItem(JSON.parse('users'));
+})

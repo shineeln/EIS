@@ -48,11 +48,11 @@ function checkPhone(inp) {
 }
 
 function checkPass(inp) {
-    var regex = /^\w{6,9}$/
+    var regex = /^\w\W{6,9}$/
     validation(regex, inp);
 }
 
 function checkConfirmPassword(inp) {
-    var regex = /^\w{6,9}$/
+    var regex = /^\w\W{6,9}$/
     validation(regex, inp);
 }

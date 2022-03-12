@@ -6,9 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        input {
+            display: block;
+            padding: 5px !important;
+            border: 1px solid silver;
+            margin: 10px !important;
+            width: 400px;
+        }
+    </style>
 </head>
 
 <body>
+    <form action="" onsubmit="return valid()">
+        <input type="text" id="email" oninput="checkEmail(this)" placeholder="Enter your email">
+        <input type="text" id="firstname" placeholder="Enter your firstname">
+        <input type="text" id="lastname" placeholder="Enter your lastname">
+        <input type="text" id="phone" oninput="checkPhone(this)" placeholder="Enter your phone number">
+        <input type="password" id="password" placeholder="Enter password">
+        <input type="password" id="checkPassword" placeholder="Enter password again">
+        <input type="submit" value="Submit">
+    </form>
     <script src="./script.js"></script>
 </body>
 
