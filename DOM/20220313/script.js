@@ -12,17 +12,14 @@ class BudgetApp {
 
     //balance
     zarlaga = document.querySelector('.zarlaga');
-    orlogo = document.querySelector('orlogo');
-    balance = document.querySelector('balance');
+    orlogo = document.querySelector('.orlogo');
+    balance = document.querySelector('.balance');
 
     budgetList = [];
-    zarlaga = 0;
-    orlogo = 0;
-    balance = 0;
 
     constructor() {
         this.listenEvents();
-        this.checkBalance()
+        this.updateUI()
     }
 
     openModal() {
@@ -38,12 +35,12 @@ class BudgetApp {
         const budget = {
             description : this.description.value,
             type : this.type.value,
-            amount : this.amount.value,
+            amount : +this.amount.value,
             date : this.date.value,
             id : Math.random().toString().split('.')[1]
         }
         this.budgetList.push(budget);
-        this.checkBalance()
+        this.updateUI()
         this.closeModal();
     }
 
@@ -55,20 +52,20 @@ class BudgetApp {
     }
 
     checkBalance() {
-        let niitZarlaga, niitOrlogo;
+        var niitZarlaga, niitOrlogo;
         niitZarlaga = this.budgetList.filter(item => item.type == '-').map(item => item.amount);
         niitOrlogo = this.budgetList.filter(item => item.type == '+').map(item => item.amount);
 
         if(!niitOrlogo.length) {
             niitOrlogo = 0
         } else {
-            niitOrlogo.reduce((a, b) => a + b);
+            niitOrlogo = niitOrlogo.reduce((a, b) => a + b);
         }
 
         if(!niitZarlaga.length) {
             niitZarlaga = 0
         } else {
-            niitZarlaga.reduce((a, b) => a + b);
+            niitZarlaga = niitZarlaga.reduce((a, b) => a + b);
         }
 
         return {
@@ -78,6 +75,12 @@ class BudgetApp {
         }
     }
 
+    updateUI() {
+        const balances = this.checkBalance();
+        this.zarlaga.innerHTML = balances.totalExpence;
+        this.orlogo.innerHTML = balances.totalIncome;
+        this.balance.innerHTML = balances.balance;
+    }
     listenEvents() {
         this.openModalBtn.addEventListener('click', this.openModal.bind(this));
         this.closeModalBtn.addEventListener('click', this.closeModal.bind(this));
