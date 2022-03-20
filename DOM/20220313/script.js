@@ -26,7 +26,7 @@ class BudgetApp {
         { description: '34dgdfg', type: '-', amount: 345345, date: '2022-04-01', id: '11928010918180232' },
         { description: '2fdgdfgdfg', type: '-', amount: 345345, date: '2022-03-25', id: '0018230099535496702' },
         { description: 'sdfsdf', type: '+', amount: 4234234, date: '2022-03-26', id: '4885077973915417' },
-        { description: 'sdfsdf', type: '+', amount: 234234, date: '', id: '6458583884803402' },
+        { description: 'sdfsdf', type: '+', amount: 234234, date: '2022-04-01', id: '6458583884803402' },
         { description: 'sfdsdfsdf', type: '-', amount: 234234, date: '2022-04-01', id: '01282046505456' }
     ];
 
@@ -45,11 +45,17 @@ class BudgetApp {
     }
 
     addBudget() {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+        today = yyyy + '-' + mm + '-' + dd;
+
         const budget = {
             description: this.description.value,
             type: this.type.value,
             amount: +this.amount.value,
-            date: this.date.value,
+            date: this.date.value == '' ? today : this.date.value,
             id: Math.random().toString().split('.')[1]
         }
         this.budgetList.push(budget);

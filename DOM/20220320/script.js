@@ -30,3 +30,32 @@ async function getPost(id) {
         console.log(err)
     }
 }
+
+function postReq() {
+    const post = {
+        userId: 1,
+        title:"new post",
+        body : "body of post"
+    }
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: "POST",
+        headers : {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify(post)
+    })
+    .then(response => response.json)
+    .then(result => console.log(result))
+    .catch(err => console.log(err.message));
+}
+
+async function testAxios() {
+    // const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+    // console.log(response.data);
+    console.log('loading')
+    const {data} = await axios.get('https://jsonplaceholder.typicode.com/posts');
+    if(data) {
+        console.log(data);
+        console.log('loading done');
+    }
+}
