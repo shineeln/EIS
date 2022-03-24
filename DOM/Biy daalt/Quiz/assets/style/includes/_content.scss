@@ -1,0 +1,54 @@
+.quiz-container {
+  .quiz-title {
+    color: $textColor;
+    padding: 15px 0;
+  }
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 10px 20px;
+  text-align: center;
+  @media (min-width: 992px) {}
+  .quiz-item {    
+    margin-top: 5rem;
+    padding: 40px 40px;
+    border: 1px solid $white;
+    border-radius: 10px;
+    .question {
+      color: $textColor;
+      font-size: 48px;
+    }
+    .answers {
+      margin-top: 30px;
+      text-align: left;
+      ul {
+        @include flex(row, space-around, center, 0);
+        list-style: none;
+        li {
+          width: 300px;
+          border: 1px solid $borderColor;
+          background-color: $borderColor;
+          color: $textColor;
+          padding: 1rem;
+          margin: 1rem;
+          border-radius: 10px;
+        }
+      }
+    }
+  }  
+  .result-box {
+    color: $textColor;
+    font-size: 40px;
+    margin-top: 100px;
+    span {
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .correct {
+      border: 1px solid #8bf58b;
+    }
+    .incorrect {
+      border: 1px solid #f12f2f;
+    }
+  }
+}

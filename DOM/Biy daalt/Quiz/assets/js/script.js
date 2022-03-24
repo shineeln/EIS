@@ -1,0 +1,96 @@
+let answers = [
+    {
+        question: "Цэнхэр, шар өнгөний дундаас ямар өнгө гардаг вэ?",
+        answers: ["ногоон", "цагаан", "цэнхэр", "хар"],
+        correctAnswer: "ногоон"
+    },
+    {
+        question: "МУ-ын үндсэн хууль хэдэн бүлэгтэй вэ?",
+        answers: [6, 3, 10, 11],
+        correctAnswer: 6
+    },
+    {
+        question: "Шатарт хүний хэдэн дүрс байдаг вэ?",
+        answers: [6, 3, 2, 4],
+        correctAnswer: 3
+    },
+    {
+        question: "Дэлхийн хамгийн жижиг хот улс",
+        answers: ["Гүрж", "Ватикан", "Монако", "Тувалу"],
+        correctAnswer: "Ватикан"
+    },
+    {
+        question: "Ёлын ам аль аймагт байдаг вэ?",
+        answers: ["Өмнөговь", "Даланзадгад", "Хэнтий", "Дорноговь"],
+        correctAnswer: "Өмнөговь"
+    },
+    {
+        question: "Дэлхийн хамгийн чийглэг улс?",
+        answers: ["Хятад", "Солонгос", "Энэтхэг", "Япон"],
+        correctAnswer: "Энэтхэг"
+    },
+    {
+        question: "Нэг мөч хэдэн минуттай тэнцэх вэ?",
+        answers: [10, 1, 5, 15],
+        correctAnswer: 15
+    },
+    {
+        question: "Дэлхий дээр хэдэн жилийн өмнө бичиг үсэг үүссэн бэ?",
+        answers: [10000, 6000, 5000, 3000],
+        correctAnswer: 5000
+    },
+    {
+        question: "Хүн хоногт хичнээн хэмжээний агаар амьсгалдаг вэ? ",
+        answers: ["10кг", "2кг", "15кг", "12кг"],
+        correctAnswer: "12кг"
+    },
+    {
+        question: "Хөвөнг юунаас гаргаж авдаг вэ?",
+        answers: ["Мод", "Ургамал", "Даавуу", "Утас"],
+        correctAnswer: "Мод"
+    },
+];
+
+let result = [];
+
+function Quiz(element) {
+    this.question = element.question;
+    this.answers = element.answers;
+    this.correctAnswer = element.correctAnswer;
+}
+
+Quiz.prototype.printQuestion = function () {
+    console.log(this.question);
+    this.answers.forEach((element, index) => {
+        console.log(`${index + 1} : ${element}`);
+    });
+}
+
+Quiz.prototype.checkAnswer = function (answer, index) {
+    if (answer == this.correctAnswer) {
+        result.push(`${index + 1} : Зөв хариуллаа.`);
+        return true;
+    }
+    result.push(`${index + 1} : Буруу хариуллаа. Зөв хариулт ${this.correctAnswer}`);
+    return false;
+}
+
+answers = randomShuffle(answers);
+
+answers.forEach((element, index) => {
+    let question = new Quiz(element);
+    question.printQuestion();
+    question.checkAnswer(prompt(element.question), index);
+});
+
+function randomShuffle(arr) {
+    for (let element = 0; element < arr.length; element++) {
+        var random = Math.floor(Math.random() * (element + 1));
+        var temp = arr[element];
+        arr[element] = arr[random];
+        arr[random] = temp;
+    }
+    return arr;
+}
+
+console.log(result);

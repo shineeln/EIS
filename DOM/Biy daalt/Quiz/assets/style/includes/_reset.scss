@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $mainColor;
+  font-size: 21px;
+  scroll-behavior: smooth;
+  background-color: $bg;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: #f15a22;
+  color: #fff;
+  text-shadow: none;
+}
