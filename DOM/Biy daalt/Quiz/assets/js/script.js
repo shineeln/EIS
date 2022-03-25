@@ -1,3 +1,6 @@
+const container = document.querySelector('.quiz')
+const questionBox = document.querySelector('.quiz-item')
+const answerBox = document.querySelector('.answers ul')
 let answers = [
     {
         question: "Цэнхэр, шар өнгөний дундаас ямар өнгө гардаг вэ?",
@@ -50,7 +53,6 @@ let answers = [
         correctAnswer: "Мод"
     },
 ];
-
 let result = [];
 
 function Quiz(element) {
@@ -58,39 +60,3 @@ function Quiz(element) {
     this.answers = element.answers;
     this.correctAnswer = element.correctAnswer;
 }
-
-Quiz.prototype.printQuestion = function () {
-    console.log(this.question);
-    this.answers.forEach((element, index) => {
-        console.log(`${index + 1} : ${element}`);
-    });
-}
-
-Quiz.prototype.checkAnswer = function (answer, index) {
-    if (answer == this.correctAnswer) {
-        result.push(`${index + 1} : Зөв хариуллаа.`);
-        return true;
-    }
-    result.push(`${index + 1} : Буруу хариуллаа. Зөв хариулт ${this.correctAnswer}`);
-    return false;
-}
-
-answers = randomShuffle(answers);
-
-answers.forEach((element, index) => {
-    let question = new Quiz(element);
-    question.printQuestion();
-    question.checkAnswer(prompt(element.question), index);
-});
-
-function randomShuffle(arr) {
-    for (let element = 0; element < arr.length; element++) {
-        var random = Math.floor(Math.random() * (element + 1));
-        var temp = arr[element];
-        arr[element] = arr[random];
-        arr[random] = temp;
-    }
-    return arr;
-}
-
-console.log(result);

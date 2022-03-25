@@ -12,7 +12,7 @@
   .quiz-item {    
     margin-top: 5rem;
     padding: 40px 40px;
-    border: 1px solid $white;
+    border: 1px solid $borderColor;
     border-radius: 10px;
     .question {
       color: $textColor;
@@ -45,7 +45,7 @@
       padding: 20px;
     }
     .correct {
-      border: 1px solid #8bf58b;
+      border: 1px solid $borderColor;
     }
     .incorrect {
       border: 1px solid #f12f2f;
