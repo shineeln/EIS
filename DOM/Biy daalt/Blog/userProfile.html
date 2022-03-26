@@ -14,8 +14,8 @@
             padding: 20px;
             margin: 20px;
         }
-        .titleDiv {
-
+        .commentBox {
+            margin-left: 100px;
         }
     </style>
 </head>
@@ -49,29 +49,59 @@
         // article
         let articles = [];
         let myArticles = [];
-        const add = document.querySelector('#add');
-        const title = document.querySelector('#title');
-        const text = document.querySelector('#text');
+        let commentList = [];
+        let articleComments = [];
+
         const container = document.querySelector('.container');
 
-        class Article {
-            constructor(title, text, userId) {
-                this.title = title;
+        class Comment {
+            constructor(text, articleId, userId) {
                 this.text = text;
                 this.id = Math.random().toString().split('.')[1];
                 this.userId = userId;
+                this.articleId = articleId;
             }
         }
 
+        function addComment(articleId) {
+            let commentContent = document.querySelector('#text_' + articleId).value;
+            if(commentContent != '') {
+                let comment = new Comment(commentContent, articleId, loggedUser.id);
+                commentList.push(comment);
+                localStorage.setItem('comments', JSON.stringify(commentList));
+                commentContent.value = '';
+                getArticles();
+            } else {
+                alert('invalid')
+            }
+        }
 
         function renderArticleList(arr) {
             container.innerHTML = '';
             arr.forEach(function(item) {
                 container.insertAdjacentHTML('afterbegin', `
-                    <div class="item">
+                    <div class="item" id="comment_${item.id}">
                         <div class="textDiv">${item.title} : ${item.text}</div>
                     </div>
                 `)
+                const articleItem = document.querySelector('#comment_' + item.id);
+                articleItem.insertAdjacentHTML('afterend', `
+                    <div class="flex commentBox">
+                        <input type="text" id="text_${item.id}"/>
+                        <button onclick="addComment(${item.id})">Add comment</button>
+                    </div>
+                `)
+                const comments = JSON.parse(localStorage.getItem('comments'));
+                if(comments != null && comments.length > 0) {
+                    myComments = comments.filter(comment => comment.articleId == item.id);
+                    myComments.forEach(function(item) {
+                        articleItem.insertAdjacentHTML('afterend', `
+                            <div class="commentList">
+                                <div class="textDiv">${item.text} : ${item.userId}</div>
+                            </div>
+                        `)
+                    })
+                }
             })
         }
 
@@ -81,6 +111,9 @@
             if(localStorage.articles) {
                 articles = JSON.parse(localStorage.getItem('articles'));
                 userId = JSON.parse(localStorage.getItem('userProfileId'))
+                if(localStorage.comments) {
+                    commentList = JSON.parse(localStorage.getItem('comments'));
+                }
                 if(articles.length > 0) {
                     myArticles = articles.filter(article => article.userId == userId);
                     renderArticleList(myArticles);
