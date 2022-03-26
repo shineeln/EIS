@@ -21,25 +21,14 @@
 </head>
 <body>
     <a href="/Blog/home.html">NewsFeed</a>
-    <h1>Profile <button onclick="logout()">Logout</button></h1>
+    <h1>Profile</h1>
     <div>Id : <span id="idVal"></span></div>
     <div>Email : <span id="emailVal"></span></div>
     <div>Firstname : <span id="firstVal"></span></div>
     <div>Lastname : <span id="lastVal"></span></div>
-    <div>Password : <span id="passVal"></span></div>
     <div>Number : <span id="numVal"></span></div>
 
     <br>
-
-    <div class="flex">
-        <label for="title">Title</label>
-        <input type="text" id="title">
-    </div>
-    <div class="flex">
-        <label for="text">Text</label>
-        <textarea id="text" cols="30" rows="10"></textarea>
-    </div>
-    <button id="add">Add article</button>
 
     <div class="container"></div>
 
@@ -48,20 +37,15 @@
     <script>
         let loggedUser = {};
     
-        if(location.pathname == '/Blog/profile.html') {
+        if(location.pathname == '/Blog/userProfile.html') {
             loggedUser = JSON.parse(localStorage.loggedUser);
             document.querySelector('#idVal').textContent = loggedUser.id;
             document.querySelector('#emailVal').textContent = loggedUser.email;
             document.querySelector('#firstVal').textContent = loggedUser.firstname;
             document.querySelector('#lastVal').textContent = loggedUser.lastname;
-            document.querySelector('#passVal').textContent = loggedUser.password;
             document.querySelector('#numVal').textContent = loggedUser.number;
         }
-        function logout() {
-            localStorage.removeItem('loggedUser');
-            location.pathname = "/Blog/login.html"
-        }
-
+        
         // article
         let articles = [];
         let myArticles = [];
@@ -79,22 +63,6 @@
             }
         }
 
-        add.addEventListener('click', function(ev) {
-            if(title.value != '' && text.value != '') {
-                const article = new Article(title.value, text.value, loggedUser.id);
-                articles.push(article);
-                localStorage.setItem('articles', JSON.stringify(articles));
-                resetForm();
-                getArticles();
-            } else {
-                alert('invalid')
-            }
-        })
-
-        function resetForm() {
-            title.value = '';
-            text.value = '';
-        }
 
         function renderArticleList(arr) {
             container.innerHTML = '';
@@ -102,7 +70,6 @@
                 container.insertAdjacentHTML('afterbegin', `
                     <div class="item">
                         <div class="textDiv">${item.title} : ${item.text}</div>
-                        <button article=${item.id} id="delete">X</button>
                     </div>
                 `)
             })
@@ -113,23 +80,13 @@
         function getArticles() {
             if(localStorage.articles) {
                 articles = JSON.parse(localStorage.getItem('articles'));
-
+                userId = JSON.parse(localStorage.getItem('userProfileId'))
                 if(articles.length > 0) {
-                    myArticles = articles.filter(article => article.userId == loggedUser.id);
+                    myArticles = articles.filter(article => article.userId == userId);
                     renderArticleList(myArticles);
                 }
             }
         }
-
-        document.addEventListener('click', function(ev) {
-            if(ev.target.id == 'delete') {
-                const artId = ev.target.getAttribute('article');
-                const updated = articles.filter(item => item.id !== artId);
-                articles = [...updated];
-                localStorage.setItem('articles', JSON.stringify(articles));
-                getArticles()
-            }
-        })
     </script>
 </body>
 </html>

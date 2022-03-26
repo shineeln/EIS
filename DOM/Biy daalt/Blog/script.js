@@ -30,7 +30,7 @@ function init(){
         users = [];
     }
     if(localStorage.loggedUser) {
-        location.pathname = "/DOM/20220312/profile.html"
+        location.pathname = "/Blog/profile.html"
     }
 }
 
@@ -53,7 +53,7 @@ login?.addEventListener('click', function() {
         if(event.email == email.value && event.password == password.value) {
             console.log(event)
             localStorage.setItem('loggedUser', JSON.stringify(event));
-            window.location.pathname = '/DOM/20220312/profile.html'
+            window.location.pathname = '/Blog/profile.html'
         } else {
             console.log('no')
         }
