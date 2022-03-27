@@ -8,8 +8,9 @@
   height: 100vh;
   padding: 10px 20px;
   text-align: center;
-  @media (min-width: 992px) {}
-  .quiz-item {    
+  @media (min-width: 992px) {
+  }
+  .quiz-item {
     margin-top: 5rem;
     padding: 40px 40px;
     border: 1px solid $borderColor;
@@ -25,6 +26,7 @@
         @include flex(row, space-around, center, 0);
         list-style: none;
         li {
+          cursor: pointer;
           width: 300px;
           border: 1px solid $borderColor;
           background-color: $borderColor;
@@ -35,11 +37,11 @@
         }
       }
     }
-  }  
+  }
   .result-box {
     color: $textColor;
-    font-size: 40px;
-    margin-top: 100px;
+    font-size: 20px;
+    margin-top: 50px;
     span {
       border-radius: 10px;
       padding: 20px;
@@ -50,5 +52,11 @@
     .incorrect {
       border: 1px solid #f12f2f;
     }
+  }
+  button {
+    width: 150px;
+    font-size: 24px;
+    padding: 10px;
+    margin-top: 30px;
   }
 }
