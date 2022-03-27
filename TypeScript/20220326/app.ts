@@ -25,3 +25,15 @@ var bla:any = 123;
 bla = [];
 bla = {};
 bla = "hhkj";
+
+// 1. 5м урттай, 3м өргөнтэй тэгш өнцөгтийн талбай болон периметрийг ол
+var urt:number = 5;
+var orgon:number = 3;
+var talbai:number = urt * orgon;
+var pr:number = (urt + orgon) * 2
+// 2. 5м радиустай тойргийн урт болон талбайг ол. (pi = 3.14)
+
+var radius:number = 5;
+var pi:number = 3.14;
+var L:number = 2 * pi * radius;
+var S:number = pi*(radius**2);
