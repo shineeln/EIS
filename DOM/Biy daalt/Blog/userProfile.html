@@ -36,14 +36,18 @@
 
     <script>
         let loggedUser = {};
+        let profile = {};
     
         if(location.pathname == '/Blog/userProfile.html') {
             loggedUser = JSON.parse(localStorage.loggedUser);
-            document.querySelector('#idVal').textContent = loggedUser.id;
-            document.querySelector('#emailVal').textContent = loggedUser.email;
-            document.querySelector('#firstVal').textContent = loggedUser.firstname;
-            document.querySelector('#lastVal').textContent = loggedUser.lastname;
-            document.querySelector('#numVal').textContent = loggedUser.number;
+
+            profile = JSON.parse(localStorage.users).filter(user => user.id == localStorage.getItem('userProfileId'));
+
+            document.querySelector('#idVal').textContent = profile.id;
+            document.querySelector('#emailVal').textContent = profile.email;
+            document.querySelector('#firstVal').textContent = profile.firstname;
+            document.querySelector('#lastVal').textContent = profile.lastname;
+            document.querySelector('#numVal').textContent = profile.number;
         }
         
         // article
