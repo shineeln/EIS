@@ -1,135 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/profile.css">
     <title>Document</title>
-    <style>
-        .item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid pink;
-            padding: 20px;
-            margin: 20px;
-        }
-        .titleDiv {
-
-        }
-    </style>
 </head>
-<body>
-    <a href="/Blog/home.html">NewsFeed</a>
-    <h1>Profile <button onclick="logout()">Logout</button></h1>
-    <div>Id : <span id="idVal"></span></div>
-    <div>Email : <span id="emailVal"></span></div>
-    <div>Firstname : <span id="firstVal"></span></div>
-    <div>Lastname : <span id="lastVal"></span></div>
-    <div>Password : <span id="passVal"></span></div>
-    <div>Number : <span id="numVal"></span></div>
 
-    <br>
+<body class="bg-light">
+    <div class="container">
+        <main>
+            <div class="py-5 row g-5">
+                <div class="col-sm-12">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span role="button" class="badge bg-primary rounded-pill pointer"
+                            onclick="javascript:location.href='./home.html'">NewsFeed</span>
+                        <span role="button" class="badge bg-danger rounded-pill pointer"
+                            onclick="logout()">Logout</span>
+                    </h4>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">ID</h6>
+                            </div>
+                            <span id="idVal" class="text-muted"></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Email</h6>
+                            </div>
+                            <span class="text-muted" id="emailVal"></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Firstname</h6>
+                            </div>
+                            <span class="text-muted" id="firstVal"></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Lastname</h6>
+                            </div>
+                            <span class="text-muted" id="lastVal"></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Password</h6>
+                            </div>
+                            <span class="text-muted" id="passVal"></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Number</h6>
+                            </div>
+                            <span class="text-muted" id="numVal"></span>
+                        </li>
+                    </ul>
 
-    <div class="flex">
-        <label for="title">Title</label>
-        <input type="text" id="title">
-    </div>
-    <div class="flex">
-        <label for="text">Text</label>
-        <textarea id="text" cols="30" rows="10"></textarea>
-    </div>
-    <button id="add">Add article</button>
+                    <form class="card p-2">
+                        <input type="text" class="form-control" placeholder="Title" id="title">
+                        <textarea class="form-control" placeholder="Text" cols="30" rows="10" id="text"></textarea>
+                        <button type="submit" class="btn btn-secondary" id="add">Add article</button>
+                    </form>
+                </div>
+            </div>
 
-    <div class="container"></div>
+            <div class="list-group articleList"></div>
 
-    <br><br>
+            <br><br>
 
-    <script>
-        let loggedUser = {};
-    
-        if(location.pathname == '/Blog/profile.html') {
-            loggedUser = JSON.parse(localStorage.loggedUser);
-            document.querySelector('#idVal').textContent = loggedUser.id;
-            document.querySelector('#emailVal').textContent = loggedUser.email;
-            document.querySelector('#firstVal').textContent = loggedUser.firstname;
-            document.querySelector('#lastVal').textContent = loggedUser.lastname;
-            document.querySelector('#passVal').textContent = loggedUser.password;
-            document.querySelector('#numVal').textContent = loggedUser.number;
-        }
-        function logout() {
-            localStorage.removeItem('loggedUser');
-            location.pathname = "/Blog/login.html"
-        }
-
-        // article
-        let articles = [];
-        let myArticles = [];
-        const add = document.querySelector('#add');
-        const title = document.querySelector('#title');
-        const text = document.querySelector('#text');
-        const container = document.querySelector('.container');
-
-        class Article {
-            constructor(title, text, userId) {
-                this.title = title;
-                this.text = text;
-                this.id = Math.random().toString().split('.')[1];
-                this.userId = userId;
-            }
-        }
-
-        add.addEventListener('click', function(ev) {
-            if(title.value != '' && text.value != '') {
-                const article = new Article(title.value, text.value, loggedUser.id);
-                articles.push(article);
-                localStorage.setItem('articles', JSON.stringify(articles));
-                resetForm();
-                getArticles();
-            } else {
-                alert('invalid')
-            }
-        })
-
-        function resetForm() {
-            title.value = '';
-            text.value = '';
-        }
-
-        function renderArticleList(arr) {
-            container.innerHTML = '';
-            arr.forEach(function(item) {
-                container.insertAdjacentHTML('afterbegin', `
-                    <div class="item">
-                        <div class="textDiv">${item.title} : ${item.text}</div>
-                        <button article=${item.id} id="delete">X</button>
-                    </div>
-                `)
-            })
-        }
-
-        getArticles()
-
-        function getArticles() {
-            if(localStorage.articles) {
-                articles = JSON.parse(localStorage.getItem('articles'));
-
-                if(articles.length > 0) {
-                    myArticles = articles.filter(article => article.userId == loggedUser.id);
-                    renderArticleList(myArticles);
+            <script>
+                let loggedUser = {};
+                if (location.pathname.includes('profile.html')) {
+                    loggedUser = JSON.parse(localStorage.loggedUser);
+                    document.querySelector('#idVal').textContent = loggedUser.id;
+                    document.querySelector('#emailVal').textContent = loggedUser.email;
+                    document.querySelector('#firstVal').textContent = loggedUser.firstname;
+                    document.querySelector('#lastVal').textContent = loggedUser.lastname;
+                    document.querySelector('#passVal').textContent = loggedUser.password;
+                    document.querySelector('#numVal').textContent = loggedUser.number;
                 }
-            }
-        }
+                function logout() {
+                    localStorage.removeItem('loggedUser');
+                    location.href = "./login.html"
+                }
 
-        document.addEventListener('click', function(ev) {
-            if(ev.target.id == 'delete') {
-                const artId = ev.target.getAttribute('article');
-                const updated = articles.filter(item => item.id !== artId);
-                articles = [...updated];
-                localStorage.setItem('articles', JSON.stringify(articles));
+                // article
+                let articles = [];
+                let myArticles = [];
+                const add = document.querySelector('#add');
+                const title = document.querySelector('#title');
+                const text = document.querySelector('#text');
+                const container = document.querySelector('.articleList');
+
+                class Article {
+                    constructor(title, text, userId) {
+                        this.title = title;
+                        this.text = text;
+                        this.id = Math.random().toString().split('.')[1];
+                        this.userId = userId;
+                    }
+                }
+
+                add.addEventListener('click', function (ev) {
+                    if (title.value != '' && text.value != '') {
+                        const article = new Article(title.value, text.value, loggedUser.id);
+                        articles.push(article);
+                        localStorage.setItem('articles', JSON.stringify(articles));
+                        resetForm();
+                        getArticles();
+                    } else {
+                        alert('invalid')
+                    }
+                })
+
+                function resetForm() {
+                    title.value = '';
+                    text.value = '';
+                }
+
+                function renderArticleList(arr) {
+                    container.innerHTML = '';
+                    arr.forEach(function (item) {
+                        container.insertAdjacentHTML('afterbegin', `
+                            <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                                <div class="d-flex gap-2 w-100 justify-content-between">
+                                    <div>
+                                        <h6 class="mb-0">${item.title} </h6>
+                                        <p class="mb-0 opacity-75">${item.text}</p>
+                                    </div>
+                                    <small article=${item.id} id="delete" class="opacity-50 text-nowrap">X</small>
+                                </div>
+                            </a>
+                        `)
+                    })
+                }
+
                 getArticles()
-            }
-        })
-    </script>
+
+                function getArticles() {
+                    if (localStorage.articles) {
+                        articles = JSON.parse(localStorage.getItem('articles'));
+
+                        if (articles.length > 0) {
+                            myArticles = articles.filter(article => article.userId == loggedUser.id);
+                            renderArticleList(myArticles);
+                        }
+                    }
+                }
+
+                document.addEventListener('click', function (ev) {
+                    if (ev.target.id == 'delete') {
+                        const artId = ev.target.getAttribute('article');
+                        const updated = articles.filter(item => item.id !== artId);
+                        articles = [...updated];
+                        localStorage.setItem('articles', JSON.stringify(articles));
+                        getArticles()
+                    }
+                })
+            </script>
+        </main>
+    </div>
 </body>
+
 </html>

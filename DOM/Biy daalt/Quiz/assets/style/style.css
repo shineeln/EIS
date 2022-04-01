@@ -112,8 +112,12 @@ a {
   margin-top: 30px;
 }
 
+#next {
+  cursor: pointer;
+}
+
 .disabled {
   pointer-events: none;
-  cursor: not-allowed;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

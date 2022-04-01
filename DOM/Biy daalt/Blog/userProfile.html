@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,11 +15,13 @@
             padding: 20px;
             margin: 20px;
         }
+
         .commentBox {
             margin-left: 100px;
         }
     </style>
 </head>
+
 <body>
     <a href="/Blog/home.html">NewsFeed</a>
     <h1>Profile</h1>
@@ -37,8 +40,8 @@
     <script>
         let loggedUser = {};
         let profile = {};
-    
-        if(location.pathname == '/Blog/userProfile.html') {
+
+        if (location.href == './userProfile.html') {
             loggedUser = JSON.parse(localStorage.loggedUser);
 
             profile = JSON.parse(localStorage.users).filter(user => user.id == localStorage.getItem('userProfileId'));
@@ -49,7 +52,7 @@
             document.querySelector('#lastVal').textContent = profile.lastname;
             document.querySelector('#numVal').textContent = profile.number;
         }
-        
+
         // article
         let articles = [];
         let myArticles = [];
@@ -69,7 +72,7 @@
 
         function addComment(articleId) {
             let commentContent = document.querySelector('#text_' + articleId).value;
-            if(commentContent != '') {
+            if (commentContent != '') {
                 let comment = new Comment(commentContent, articleId, loggedUser.id);
                 commentList.push(comment);
                 localStorage.setItem('comments', JSON.stringify(commentList));
@@ -82,7 +85,7 @@
 
         function renderArticleList(arr) {
             container.innerHTML = '';
-            arr.forEach(function(item) {
+            arr.forEach(function (item) {
                 container.insertAdjacentHTML('afterbegin', `
                     <div class="item" id="comment_${item.id}">
                         <div class="textDiv">${item.title} : ${item.text}</div>
@@ -96,9 +99,9 @@
                     </div>
                 `)
                 const comments = JSON.parse(localStorage.getItem('comments'));
-                if(comments != null && comments.length > 0) {
+                if (comments != null && comments.length > 0) {
                     myComments = comments.filter(comment => comment.articleId == item.id);
-                    myComments.forEach(function(item) {
+                    myComments.forEach(function (item) {
                         articleItem.insertAdjacentHTML('afterend', `
                             <div class="commentList">
                                 <div class="textDiv">${item.text} : ${item.userId}</div>
@@ -112,13 +115,13 @@
         getArticles()
 
         function getArticles() {
-            if(localStorage.articles) {
+            if (localStorage.articles) {
                 articles = JSON.parse(localStorage.getItem('articles'));
                 userId = JSON.parse(localStorage.getItem('userProfileId'))
-                if(localStorage.comments) {
+                if (localStorage.comments) {
                     commentList = JSON.parse(localStorage.getItem('comments'));
                 }
-                if(articles.length > 0) {
+                if (articles.length > 0) {
                     myArticles = articles.filter(article => article.userId == userId);
                     renderArticleList(myArticles);
                 }
@@ -126,4 +129,5 @@
         }
     </script>
 </body>
+
 </html>
