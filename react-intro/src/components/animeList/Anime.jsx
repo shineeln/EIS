@@ -1,6 +1,6 @@
-const Anime = ({key, imgUrl}) => {
-    return <div key={key} class="card-item">
-        <a href="#" alt="item-img" class="img-con">
+const Anime = ({imgUrl}) => {
+    return <div className="card-item">
+        <a ç="#" alt="item-img" className="img-con">
         <img src={imgUrl} alt="" />
         </a>
   </div>

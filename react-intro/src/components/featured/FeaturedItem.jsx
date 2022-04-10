@@ -1,5 +1,5 @@
-const FeaturedItem  = ({key, title, imgUrl}) => {
-    return <div key={key} className="box-item">
+const FeaturedItem  = ({title, imgUrl}) => {
+    return <div className="box-item">
         <a href="#" alt="item-img" className="img-con">
             <img src={imgUrl} alt=""/>
         </a>
