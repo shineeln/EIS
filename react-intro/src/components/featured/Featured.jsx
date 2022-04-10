@@ -64,17 +64,13 @@ const arr = [
     
 ];
 const Featured = () => {
-    return   <main>
-        <section className="row">
-            <figure className="featured">
-                <div className="box">
-                    {
-                        arr.map(el => <FeaturedItem key={el.id} title={el.title} imgUrl={el.imgUrl}/>)
-                    }
-                </div>
-            </figure>
-        </section>
-    </main>
+    return  <figure className="featured">
+        <div className="box">
+            {
+                arr.map(el => <FeaturedItem key={el.id} title={el.title} imgUrl={el.imgUrl}/>)
+            }
+        </div>
+    </figure>
 }
 
 export default Featured;
