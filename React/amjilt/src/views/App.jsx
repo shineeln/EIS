@@ -35,7 +35,7 @@ const App = () => {
 				</figure>
 				<Subtitle direction="left" title="ДИЖИТАЛ ШИЛЖИЛТ - 2020 / 2021"/>
 				<figure className="flex items-center justify-between gap-20">
-				<AboutItem idName="left" hrClass="orange" title="АМЖИЛТ 2.0 СИСТЕМИЙГ ХЭРЭГЛЭХ ШАЛТГААН" desc={about2}/>
+					<AboutItem idName="left" hrClass="orange" title="АМЖИЛТ 2.0 СИСТЕМИЙГ ХЭРЭГЛЭХ ШАЛТГААН" desc={about2}/>
 					<div id="right" className="flex-1">
 						<Image classes="transform transition duration-500 hover:-translate-y-4" imgUrl="https://amjilt.com/landing-assets/upload/asiangirl.png"/>
 					</div>
