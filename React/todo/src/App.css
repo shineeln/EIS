@@ -49,6 +49,8 @@
   border-radius: 15px;
   margin-bottom: 15px;
   border: 5px solid #4343c9;
+  display: flex;
+  justify-content: space-between;
 }
 
 .todoList .todoLi label {
