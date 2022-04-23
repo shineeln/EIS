@@ -6,6 +6,7 @@ const App = () => {
     const [todo, setTodo] = useState('');
 
     const changeTodo = (event) => {
+        console.log(event.target.value)
         setTodo(event.target.value);
     }
 
