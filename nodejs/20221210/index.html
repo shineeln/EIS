@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Document</title>
+</head>
+<body>
+    <input id="text" type="text">
+      <button id="getBtn" onclick="getList()">Get</button>
+      <button  id="PostBtn">Post</button>
+      <button  id="PutBtn">Put</button>
+      <ul id="display"></ul>
+    <script>
+        let get = document.querySelector('#getBtn');
+        let post = document.querySelector('#PostBtn');
+        let put = document.querySelector('#PutBtn');
+        let display = document.querySelector('#display');
+        let inp = document.querySelector('#text');
+        const deleteBtn = (e)=>{
+          fetch("http://localhost:3000/students/"+e.target.dataset.id, 
+          {
+            method:'DELETE'
+          })
+          e.target.parentElement.remove()
+          }
+
+          const updateBtn = (e)=>{
+            put.disabled = false;
+            post.disabled = true;
+            console.log(e.target.dataset)
+            inp.value = e.target.dataset.firstname;
+            put.dataset.id = e.target.dataset.id;
+          }
+
+        post.addEventListener('click',async()=>{
+          if(!inp.value) {
+            return alert("valid")
+          }
+          let student={
+            name:inp.value
+          }
+          console.log(student)
+          let respons = await fetch('http://localhost:3000/students', {
+            method:"POST",
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(student),
+          });
+          let data = await respons.json();
+          console.log(data)
+          getList();
+        })
+
+        put.addEventListener('click',async(e)=>{
+          if(!inp.value) {
+            return alert("valid")
+          }
+          let student={
+            id : e.target.dataset.id,
+            name:inp.value
+          }
+          console.log(student)
+          let respons = await fetch('http://localhost:3000/students', {
+            method:"PUT",
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(student),
+          });
+          post.disabled = false;
+          put.disabled = true;
+          getList();
+        })
+
+        const getList = async () => {
+          let respons =  await fetch('http://localhost:3000/students' , {method:'GET'});
+          let data = await respons.json();
+          console.log(data)
+          resetData();
+            data.forEach(element => {
+              display.innerHTML +=`<li>${element.firstname} 
+                <button data-id="${element.id}" onclick="deleteBtn(event) "> delet item</button>
+                <button data-id="${element.id}" data-firstname="${element.firstname}" onclick="updateBtn(event) "> update item</button>
+              </li>`
+            });
+        }
+
+        const resetData = () => {
+          display.innerHTML = "";
+          inp.value = "";
+        }
+
+        getList();
+        put.disabled = true;
+    </script>
+  
+</body>
+</html>

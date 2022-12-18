@@ -1,0 +1,12 @@
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+    "name" : "shinee"
+}
+
+###
+GET http://localhost:3000/students
+
+###
+PUT http://localhost:3000/students

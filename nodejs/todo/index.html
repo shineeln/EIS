@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Document</title>
+</head>
+<body>
+  <div style="padding: 30px;">
+    <button style="margin-bottom: 20px;" id="getBtn" onclick="getList()">Get todo list</button>
+    <div>
+      <input id="text" type="text" placeholder="enter todo">
+      <button  id="PostBtn">Add todo</button>
+      <button  id="PutBtn">Edit todo</button>
+      <ul id="display"></ul>
+    </div>
+  
+  </div>
+
+
+   
+    <script>
+        let get = document.querySelector('#getBtn');
+        let post = document.querySelector('#PostBtn');
+        let put = document.querySelector('#PutBtn');
+        let display = document.querySelector('#display');
+        let inp = document.querySelector('#text');
+        const deleteBtn = (e)=>{
+          fetch("http://localhost:3000/todos/"+e.target.dataset.id, 
+          {
+            method:'DELETE'
+          })
+          e.target.parentElement.remove()
+          }
+
+          const toggle = async (e) => {
+            let todo={
+              id : e.target.dataset.id,
+              name : e.target.dataset.name,
+              completed : e.value == 'Y' ? 'N' : 'Y'
+            }
+            console.log(todo)
+            let respons = await fetch('http://localhost:3000/todos', {
+              method:"PUT",
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
+              body:JSON.stringify(todo),
+            });
+            getList();
+          }
+
+          const updateBtn = (e)=>{
+            put.disabled = false;
+            post.disabled = true;
+            console.log(e.target.dataset)
+            inp.value = e.target.dataset.name;
+            put.dataset.id = e.target.dataset.id;
+            put.dataset.completed = e.target.dataset.completed;
+          }
+
+        post.addEventListener('click',async()=>{
+          if(!inp.value) {
+            return alert("valid")
+          }
+          let todo={
+            name:inp.value
+          }
+          console.log(todo)
+          let respons = await fetch('http://localhost:3000/todos', {
+            method:"POST",
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(todo),
+          });
+          let data = await respons.json();
+          console.log(data)
+          getList();
+        })
+
+        put.addEventListener('click',async(e)=>{
+          if(!inp.value) {
+            return alert("valid")
+          }
+          let todo={
+            id : e.target.dataset.id,
+            name:inp.value,
+            completed : e.target.dataset.completed
+          }
+          console.log(todo)
+          let respons = await fetch('http://localhost:3000/todos', {
+            method:"PUT",
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(todo),
+          });
+          post.disabled = false;
+          put.disabled = true;
+          getList();
+        })
+
+        const getList = async () => {
+          let respons =  await fetch('http://localhost:3000/todos' , {method:'GET'});
+          let data = await respons.json();
+          console.log(data)
+          resetData();
+            data.forEach(element => {
+              display.innerHTML +=`<li>
+                <input type="checkbox" value="${element.completed}" data-id="${element.id}" data-name="${element.name}" onclick="toggle(event)" ${element.completed == 'Y' ? "checked" : ""}/>${element.name} 
+                <button data-id="${element.id}" onclick="deleteBtn(event) "> delete</button>
+                <button data-id="${element.id}" data-completed="${element.completed}" data-name="${element.name}" onclick="updateBtn(event) "> update</button>
+              </li>`
+            });
+        }
+
+        const resetData = () => {
+          display.innerHTML = "";
+          inp.value = "";
+        }
+
+        getList();
+        put.disabled = true;
+    </script>
+  
+</body>
+</html>
