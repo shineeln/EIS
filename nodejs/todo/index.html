@@ -39,7 +39,7 @@
             let todo={
               id : e.target.dataset.id,
               name : e.target.dataset.name,
-              completed : e.value == 'Y' ? 'N' : 'Y'
+              completed : e.target.value == 'Y' ? 'N' : 'Y'
             }
             console.log(todo)
             let respons = await fetch('http://localhost:3000/todos', {
