@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+    <link rel="stylesheet" href="/public/styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@latest/dist/flowbite.min.css" />
+
     <title>Document</title>
 </head>
 <body>
   <div style="padding: 30px;">
-    <button style="margin-bottom: 20px;" id="getBtn" onclick="getList()">Get todo list</button>
-    <div>
-      <input id="text" type="text" placeholder="enter todo">
-      <button  id="PostBtn">Add todo</button>
-      <button  id="PutBtn">Edit todo</button>
-      <ul id="display"></ul>
+    <div class="flex items-center justify-between">
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Todo List</h1>
+
+      <button type="button" class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2" id="getBtn" onclick="getList()">Get todo list</button>
     </div>
+
+    <form class="flex items-center py-5">   
+      <div class="relative w-full">
+          <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your todo" placeholder="Enter todo..." id="text" required>
+      </div>
+      <button type="button" id="PostBtn" class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add</button>
+      <button type="button" id="PutBtn" class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Edit</button>
+    </form>
+
+    <ul id="display" class="w-full divide-y divide-gray-200 dark:divide-gray-700"></ul>
+
   
   </div>
 
-
-   
     <script>
         let get = document.querySelector('#getBtn');
         let post = document.querySelector('#PostBtn');
@@ -32,7 +41,7 @@
           {
             method:'DELETE'
           })
-          e.target.parentElement.remove()
+          e.target.parentElement.parentElement.remove()
           }
 
           const toggle = async (e) => {
@@ -55,7 +64,9 @@
 
           const updateBtn = (e)=>{
             put.disabled = false;
+            put.classList.remove("cursor-not-allowed");
             post.disabled = true;
+            post.classList.add("cursor-not-allowed");
             console.log(e.target.dataset)
             inp.value = e.target.dataset.name;
             put.dataset.id = e.target.dataset.id;
@@ -102,7 +113,10 @@
             body:JSON.stringify(todo),
           });
           post.disabled = false;
+          post.classList.remove("cursor-not-allowed");
           put.disabled = true;
+          put.classList.add("cursor-not-allowed");
+
           getList();
         })
 
@@ -112,10 +126,22 @@
           console.log(data)
           resetData();
             data.forEach(element => {
-              display.innerHTML +=`<li>
-                <input type="checkbox" value="${element.completed}" data-id="${element.id}" data-name="${element.name}" onclick="toggle(event)" ${element.completed == 'Y' ? "checked" : ""}/>${element.name} 
-                <button data-id="${element.id}" onclick="deleteBtn(event) "> delete</button>
-                <button data-id="${element.id}" data-completed="${element.completed}" data-name="${element.name}" onclick="updateBtn(event) "> update</button>
+              display.innerHTML +=`
+              <li class="py-3 sm:py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                      <input type="checkbox" value="${element.completed}" data-id="${element.id}" data-name="${element.name}" onclick="toggle(event)" ${element.completed == 'Y' ? "checked" : ""}/>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                        ${element.name} 
+                      </p>
+                    </div>
+                    <button data-id="${element.id}" onclick="deleteBtn(event)" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                    </button>
+                    <button data-id="${element.id}" data-completed="${element.completed}" data-name="${element.name}" onclick="updateBtn(event)" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"> <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg></button>
+                </div>
               </li>`
             });
         }
@@ -127,6 +153,7 @@
 
         getList();
         put.disabled = true;
+        put.classList.add("cursor-not-allowed");
     </script>
   
 </body>
